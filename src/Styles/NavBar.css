@@ -1,0 +1,76 @@
+.nav-links {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: -1rem;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.183);
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 50px;
+  transform: translateY(-100%);
+  transition: transform 0.3s ease-in-out;
+  z-index: 150; /* Asegúrate de que el menú esté encima */
+}
+
+.nav-links.open {
+  transform: translateY(0); /* Despliega el menú */
+  padding: 0;
+}
+
+.nav-link {
+  opacity: 0;
+  transform: translateY(
+    20px
+  ); /* Por defecto, enlaces ligeramente fuera de la vista */
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+}
+
+.nav-links.open .home {
+  animation-name: slide-in;
+  animation-delay: 0.4s;
+}
+
+.nav-links.open .about {
+  animation-name: slide-in;
+  animation-delay: 0.6s;
+}
+
+.nav-links.open .contact {
+  animation-name: slide-in;
+  animation-delay: 0.8s;
+}
+
+/* Animación para que los enlaces entren desde abajo */
+@keyframes slide-in {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 24px;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #f0a500;
+}
+
+@media (max-width: 768px) {
+  .nav-link {
+    display: block;
+    
+  }
+}
