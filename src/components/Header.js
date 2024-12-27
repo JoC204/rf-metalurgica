@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
 import Navbar from "../components/NavBar"; // Ajusta la ruta si es necesario
 import "../Styles/Header.css";
-import Logo from "../img/ESC44.png";
+import Logo from "../img/rf-logo.png";
+import WhatsappLogo from "../img/wts.svg";
 
 const Header = () => {
   const [scrolling, setScrolling] = useState(false);
-  const [likes, setLikes] = useState(0);
   const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
@@ -36,9 +36,8 @@ const Header = () => {
         ☰
       </button>
       <Navbar menuOpen={menuOpen} closeMenu={closeMenu} />
-      <div className="likes">
-        <span>{likes}</span>
-        <button onClick={() => setLikes(likes + 1)}>❤️</button>
+      <div className="wtsLogo">
+        <img src={WhatsappLogo} alt="Whatsapp Logo" />
       </div>
     </header>
   );

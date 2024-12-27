@@ -1,8 +1,10 @@
 /* Header.css */
 .header {
   display: flex;
-  justify-content: space-around;
   align-items: center;
+  justify-content: center;
+  height: 80px;
+  gap: 250px;
   background-image: linear-gradient(to top, #00000095 0%, #000000 100%);
   color: white;
   position: fixed;
@@ -23,7 +25,10 @@
 }
 
 .hamburger {
-  display: block;
+  position: absolute; /* Para centrarlo en relación al viewport y el menú */
+  top: 50%; /* Centrado vertical */
+  left: 50%; /* Centrado horizontal */
+  transform: translate(-50%, -50%);
   font-size: 30px;
   background: none;
   padding: 0;
@@ -38,27 +43,13 @@
 }
 
 
-.likes {
+.wtsLogo {
   display: flex;
   align-items: center;
-  
-}
-
-.likes span {
-  margin-right: 5px;
-  font-size: 18px;
-}
-
-.likes button {
-  background: none;
-  border: none;
-  color: white;
-  font-size: 20px;
-  cursor: pointer;
-}
-
-.likes button:hover {
-  color: #f00;
+  gap: 10px;
+  width: 40px;
+  padding: 0;
+  margin: 0;
 }
 
 @media (min-width: 768px) {

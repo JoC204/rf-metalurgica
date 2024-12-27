@@ -4,73 +4,49 @@
   flex-direction: column;
   position: fixed;
   top: -1rem;
-  left: 0;
   width: 100%;
   height: 100vh;
-  background-color: rgba(0, 0, 0, 0.183);
+  background-color: rgba(0, 0, 0);
   justify-content: space-evenly;
   align-items: center;
-  gap: 50px;
+  gap: 30px;
   transform: translateY(-100%);
   transition: transform 0.3s ease-in-out;
-  z-index: 150; /* Asegúrate de que el menú esté encima */
+  z-index: 150;
+  padding-inline-start: 0;
 }
 
 .nav-links.open {
-  transform: translateY(0); /* Despliega el menú */
-  padding: 0;
+  transform: translateY(0);
 }
 
 .nav-link {
-  opacity: 0;
-  transform: translateY(
-    20px
-  ); /* Por defecto, enlaces ligeramente fuera de la vista */
-  animation-duration: 0.5s;
-  animation-fill-mode: forwards;
+  margin: 0;
 }
 
-.nav-links.open .home {
-  animation-name: slide-in;
-  animation-delay: 0.4s;
-}
-
-.nav-links.open .about {
-  animation-name: slide-in;
-  animation-delay: 0.6s;
-}
-
-.nav-links.open .contact {
-  animation-name: slide-in;
-  animation-delay: 0.8s;
-}
-
-/* Animación para que los enlaces entren desde abajo */
-@keyframes slide-in {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.nav-links a {
-  color: white;
+.nav-link a {
   text-decoration: none;
+  color: white;
   font-size: 24px;
   transition: color 0.3s;
 }
 
-.nav-links a:hover {
+.nav-link a:hover {
   color: #f0a500;
 }
 
-@media (max-width: 768px) {
-  .nav-link {
-    display: block;
-    
+/* Animación al hacer clic */
+.nav-link.active {
+  animation: slideRight 0.5s ease forwards;
+}
+
+@keyframes slideRight {
+  from {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(200px);
+    opacity: 0;
   }
 }
