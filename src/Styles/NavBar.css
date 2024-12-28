@@ -31,13 +31,15 @@
   transition: color 0.3s;
 }
 
+
+
 .nav-link a:hover {
   color: #f0a500;
 }
 
 /* Animación al hacer clic */
 .nav-link.active {
-  animation: slideRight 0.5s ease forwards;
+  animation: slideRight 0.7s ease forwards;
 }
 
 @keyframes slideRight {
@@ -46,7 +48,7 @@
     opacity: 1;
   }
   to {
-    transform: translateX(200px);
+    transform: translateX(900px);
     opacity: 0;
   }
 }
