@@ -18,10 +18,32 @@
 
 .nav-links.open {
   transform: translateY(0);
+ 
 }
 
 .nav-link {
-  margin: 0;
+  opacity: 0; 
+  transform: translateY(50px); /* Aparecen desde abajo */
+  animation: none;
+}
+
+.nav-links.open .nav-link {
+  animation: slideUp 1.2s ease forwards; /* Aplica la animación al abrir */
+}
+
+.nav-link.active {
+  animation: slideRight 0.9s ease forwards !important; /* Aplica la animación al cerrar */
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .nav-link a {
@@ -32,23 +54,26 @@
 }
 
 
-
 .nav-link a:hover {
   color: #f0a500;
 }
 
 /* Animación al hacer clic */
-.nav-link.active {
-  animation: slideRight 0.7s ease forwards;
-}
+
 
 @keyframes slideRight {
-  from {
+  0% {
     transform: translateX(0);
     opacity: 1;
   }
-  to {
-    transform: translateX(900px);
+  20% {
+    transform: translateX(-60px); /* Va ligeramente hacia la izquierda */
+  }
+  40% {
+    transform: translateX(200px); /* Vuelve hacia la derecha */
+  }
+  100% {
+    transform: translateX(900px); /* Sale completamente */
     opacity: 0;
   }
 }

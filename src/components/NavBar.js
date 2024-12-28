@@ -17,17 +17,17 @@ const Navbar = ({ menuOpen, closeMenu }) => {
   return (
     <ul className={`nav-links ${menuOpen ? "open" : ""}`}>
       <li className="nav-link home">
-        <a href="#home" className="link-slide" onClick={handleLinkClick}>
+        <a href="#home" onClick={handleLinkClick}>
           Home
         </a>
       </li>
       <li className="nav-link about">
-        <a href="#about" className="link-slide" onClick={handleLinkClick}>
+        <a href="#about" onClick={handleLinkClick}>
           About
         </a>
       </li>
       <li className="nav-link contact">
-        <a href="#contact" className="link-slide" onClick={handleLinkClick}>
+        <a href="#contact" onClick={handleLinkClick}>
           Contact
         </a>
       </li>
