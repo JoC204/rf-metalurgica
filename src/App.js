@@ -1,30 +1,32 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Header from "./components/Header";
-// import BannerInicio from "./components/BannerInicio";
+import Home from "./components/Home"; // Importamos el nuevo componente
+import About from "./components/About"; // Importamos el nuevo componente
+import Contact from "./components/Contact"; // Importamos el nuevo componente
+import PageTemplate from "./components/PageTemplate"; // Importamos el nuevo componente
+
+const pages = [
+  { id: "home", title: "Inicio", content: "Bienvenido a nuestra página principal." },
+  { id: "contact", title: "Contacto", content: "Aquí están nuestro contacto." },
+  { id: "about", title: "Acerca de", content: "Conoce más sobre nosotros." },
+];
 
 const App = () => {
-  const [scrolling, setScrolling] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const scrollTop = window.scrollY;
-      setScrolling(scrollTop > 90); // Detecta el scroll
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
-
   return (
-    <>
-      <Header scrolling={scrolling} />
+    <Router>
+      <Header />
       <main>
-       
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="about" element={<About />} />
+          <Route path="contact" element={<Contact />} />
+          <Route path="/:pageId" element={<PageTemplate pages={pages} />} />
+        </Routes>
       </main>
-    </>
+    </Router>
   );
 };
 
 export default App;
+

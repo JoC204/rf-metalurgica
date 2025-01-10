@@ -1,35 +1,36 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "../Styles/NavBar.css";
 
 const Navbar = ({ menuOpen, closeMenu }) => {
   const handleLinkClick = (event) => {
     const link = event.target;
-    const parentLi = link.parentElement; // Obtiene el elemento <li>
+    const parentLi = link.parentElement;
 
-    parentLi.classList.add("active"); // Activa la animación en el <li>
+    parentLi.classList.add("active");
 
     setTimeout(() => {
-      parentLi.classList.remove("active"); // Limpia la animación
-      closeMenu(); // Cierra el menú
-    }, 300); // Coincide con la duración de la animación en el CSS
+      parentLi.classList.remove("active");
+      closeMenu();
+    }, 300);
   };
 
   return (
     <ul className={`nav-links ${menuOpen ? "open" : ""}`}>
       <li className="nav-link home">
-        <a href="#home" onClick={handleLinkClick}>
+        <Link to="/" onClick={handleLinkClick}>
           Home
-        </a>
+        </Link>
       </li>
       <li className="nav-link about">
-        <a href="#about" onClick={handleLinkClick}>
+        <Link to="/about" onClick={handleLinkClick}>
           About
-        </a>
+        </Link>
       </li>
       <li className="nav-link contact">
-        <a href="#contact" onClick={handleLinkClick}>
+        <Link to="/contact" onClick={handleLinkClick}>
           Contact
-        </a>
+        </Link>
       </li>
     </ul>
   );

@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import Navbar from "../components/NavBar"; // Ajusta la ruta si es necesario
 import "../Styles/Header.css";
 import Logo from "../img/rf-logo.png";
@@ -27,15 +28,17 @@ const Header = () => {
   return (
     <header className={`header ${scrolling ? "hidden" : ""}`}>
       <>
-        <img className="logo" src={Logo} alt="Logo" />
-      <button
-        className={`hamburger ${menuOpen ? "active" : ""}`}
-        onClick={() => setMenuOpen(!menuOpen)}
-      >
-        ☰
-      </button>
-      <Navbar menuOpen={menuOpen} closeMenu={closeMenu} />
-      <img className="wtsLogo" src={WhatsappLogo} alt="Whatsapp Logo" />
+        <Link to="/" onClick={closeMenu} className="logo-link">
+          <img className="logo" src={Logo} alt="Logo" />
+        </Link>
+        <button
+          className={`hamburger ${menuOpen ? "active" : ""}`}
+          onClick={() => setMenuOpen(!menuOpen)}
+        >
+          ☰
+        </button>
+        <Navbar menuOpen={menuOpen} closeMenu={closeMenu} />
+        <img className="wtsLogo" src={WhatsappLogo} alt="Whatsapp Logo" />
       </>
     </header>
   );

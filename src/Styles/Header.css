@@ -26,6 +26,8 @@
 
 .logo  {
   height: 40px;
+}
+.logo-link {
   z-index: 5000;
 }
 
