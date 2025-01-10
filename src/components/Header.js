@@ -26,9 +26,8 @@ const Header = () => {
 
   return (
     <header className={`header ${scrolling ? "hidden" : ""}`}>
-      <div className="logo">
-        <img src={Logo} alt="Logo" />
-      </div>
+      <>
+        <img className="logo" src={Logo} alt="Logo" />
       <button
         className={`hamburger ${menuOpen ? "active" : ""}`}
         onClick={() => setMenuOpen(!menuOpen)}
@@ -36,9 +35,8 @@ const Header = () => {
         ☰
       </button>
       <Navbar menuOpen={menuOpen} closeMenu={closeMenu} />
-      <div className="wtsLogo">
-        <img src={WhatsappLogo} alt="Whatsapp Logo" />
-      </div>
+      <img className="wtsLogo" src={WhatsappLogo} alt="Whatsapp Logo" />
+      </>
     </header>
   );
 };

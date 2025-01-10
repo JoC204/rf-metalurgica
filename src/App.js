@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Header from "./components/Header";
-import BannerInicio from "./components/BannerInicio";
+// import BannerInicio from "./components/BannerInicio";
 
 const App = () => {
   const [scrolling, setScrolling] = useState(false);
@@ -21,8 +21,7 @@ const App = () => {
     <>
       <Header scrolling={scrolling} />
       <main>
-        <BannerInicio />
-        {/* Añade aquí los demás componentes */}
+       
       </main>
     </>
   );
