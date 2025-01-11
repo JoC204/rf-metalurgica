@@ -1,0 +1,30 @@
+/* global.css */
+html {
+    box-sizing: border-box; /* Asegura que padding y border no afecten el tamaño del elemento */
+    font-size: 16px; /* Define el tamaño base para rem */
+    scroll-behavior: smooth; /* Para un scroll fluido */
+    margin: 0.1rem;
+  }
+  
+  *, *::before, *::after {
+    box-sizing: inherit; /* Hereda el comportamiento de box-sizing */
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif; /* Estilo global de texto */
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5; /* Fondo claro */
+    color: #333; /* Color del texto */
+    line-height: 1.6;
+    min-height: 100vh;
+  }
+  
+  main {
+    padding: 16px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  

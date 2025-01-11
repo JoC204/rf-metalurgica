@@ -3,7 +3,7 @@
   align-items: center;
   justify-content: center;
   height: 80px;
-  gap: 250px;
+  gap: 180px;
   background-image: linear-gradient(
     to top,
     #00000000 0%,
@@ -36,7 +36,7 @@
   top: 50%; /* Centrado vertical */
   left: 50%; /* Centrado horizontal */
   transform: translate(-50%, -50%);
-  font-size: 30px;
+  font-size: 2rem;
   background: none;
   padding: 0;
   border: none;
