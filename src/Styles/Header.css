@@ -6,8 +6,8 @@
   gap: 180px;
   background-image: linear-gradient(
     to top,
-    #00000000 0%,
-    #00000028 50%,
+    #ffffff00 0%,
+    #00000019 50%,
     #00000052 100%
   );
   color: white;
@@ -16,7 +16,7 @@
   width: 100%;
   top: 0;
   left: 0;
-  transition: transform 0.9s ease; /* Para la transición */
+  transition: transform 0.6s ease; /* Para la transición */
   
 }
 
@@ -56,7 +56,9 @@
   width: 40px;
   padding: 0;
   margin: 0;
-  z-index: 2;
+}
+.wtsLogoLink {
+  z-index: 5000;
 }
 
 @media (min-width: 768px) {

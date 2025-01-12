@@ -12,7 +12,7 @@ const Header = () => {
   useEffect(() => {
     const handleScroll = () => {
       const scrollTop = window.scrollY;
-      setScrolling(scrollTop > 90);
+      setScrolling(scrollTop > 50);
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -38,7 +38,14 @@ const Header = () => {
           ☰
         </button>
         <Navbar menuOpen={menuOpen} closeMenu={closeMenu} />
-        <img className="wtsLogo" src={WhatsappLogo} alt="Whatsapp Logo" />
+        <a
+          className="wtsLogoLink"
+          href="https://wa.me/341555 55 55"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img className="wtsLogo" src={WhatsappLogo} alt="WhatsApp Logo" />
+        </a>
       </>
     </header>
   );
