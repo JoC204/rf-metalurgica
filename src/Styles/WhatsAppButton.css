@@ -1,0 +1,15 @@
+.WhatsAppButton {
+    opacity: 0;
+    transform: translateY(100px); /* Inicialmente fuera de la pantalla */
+  }
+  
+  .WhatsAppButton.visible {
+    opacity: 1;
+    transform: translateY(0); /* Entra en la pantalla */
+  }
+  
+  .WhatsAppButton.hidden {
+    opacity: 0;
+    transform: translateY(100px); /* Sale de la pantalla */
+  }
+  
