@@ -3,7 +3,7 @@ import whatsappIcon from "../img/wts.png";
 import "../Styles/WhatsAppButton.css";
 
 const WhatsAppButton = () => {
-  const [scrolling, setScrolling] = useState(false);
+  const [scrolling, setScrolling] = useState(true);
 
   useEffect(() => {
     const handleScroll = () => {
