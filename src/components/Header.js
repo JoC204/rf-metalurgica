@@ -40,7 +40,7 @@ const Header = () => {
         <Navbar menuOpen={menuOpen} closeMenu={closeMenu} />
         <a
           className="wtsLogoLink"
-          href="https://wa.me/341555 55 55"
+          href="https://wa.me/+5493415555535?text=Hola%2C%20te%20contacto%20desde%20la%20web%20de%20RF%20Metalurgica%0A%0A%20--"
           target="_blank"
           rel="noopener noreferrer"
         >
