@@ -27,7 +27,7 @@ const Header = () => {
 
   return (
     <header className={`header ${scrolling ? "hidden" : ""}`}>
-      <>
+      <div className="header-content">
         <Link to="/" onClick={closeMenu} className="logo-link">
           <img className="logo" src={Logo} alt="Logo" />
         </Link>
@@ -38,15 +38,18 @@ const Header = () => {
           ☰
         </button>
         <Navbar menuOpen={menuOpen} closeMenu={closeMenu} />
-        <a
-          className="wtsLogoLink"
-          href="https://wa.me/+5493415555535?text=Hola%2C%20te%20contacto%20desde%20la%20web%20de%20RF%20Metalurgica%0A%0A%20--"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <img className="wtsLogo" src={WhatsappLogo} alt="WhatsApp Logo" />
-        </a>
-      </>
+        <div className="social-links">
+          <a
+            className="wtsLogoLink"
+            href="https://wa.me/+5493415555535?text=Hola%2C%20te%20contacto%20desde%20la%20web%20de%20RF%20Metalurgica%0A%0A%20--"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img className="wtsLogo" src={WhatsappLogo} alt="WhatsApp Logo" />
+          </a>
+          {/* Agrega más logos de redes sociales aquí */}
+        </div>
+      </div>
     </header>
   );
 };
