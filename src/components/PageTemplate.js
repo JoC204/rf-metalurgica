@@ -13,7 +13,6 @@ const PageTemplate = ({ pages }) => {
 
   return (
     <section className="page-template">
-      <h1>{pageData.title}</h1>
       <p>{pageData.content}</p>
     </section>
   );

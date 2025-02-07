@@ -5,9 +5,10 @@
   height: 80px;
   background-image: linear-gradient(
     to top,
-    #ffffff00 0%,
-    #00000019 50%,
-    #00000052 100%
+    #00000000 0%,
+    #00000059 40%,
+    #00000061 50%,
+    #0000008b 100%
   );
   color: white;
   position: fixed;

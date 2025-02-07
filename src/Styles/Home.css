@@ -1,38 +1,67 @@
+/* Contenedor principal ocupa toda la pantalla */
 .home {
-  text-align: center;
-  height: 100vh; /* Ocupa el 100% del viewport height */
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  margin: 0;
+  padding: 0;
 }
 
-h1 {
-  margin-bottom: 20px; /* Espacio entre el título y el carrusel */
-}
-
+/* Estilos para el carrusel */
 .mySwiper {
+  margin: 0;
+  padding: 0;
   width: 100%;
-  height: 80vh; /* Altura del carrusel */
+  height: 100vh;  
 }
 
-.swiper-slide img {
+/* Centrar el contenido de cada slide */
+.swiper-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Contenedor para el zoom */
+.swiper-zoom-container {
+  margin: 0;
+  padding: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Ajusta la imagen al contenedor */
+  overflow: hidden;
 }
 
-/* Estilos para los círculos de paginación */
+/* Por defecto, los slides inactivos no tendrán animación */
+.swiper-slide .swiper-zoom-container img {
+  animation: none;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Solo el slide activo tendrá la animación de zoom iniciando desde scale(1) */
+.swiper-slide-active .swiper-zoom-container img {
+  animation: subtleZoom 7010ms ease-in-out infinite;
+}
+
+/* Definición de la animación: inicia en scale(1) para evitar cortes */
+@keyframes subtleZoom {
+  0% {
+    transform: scale(1);
+  }
+  
+  100% {
+    transform: scale(1.08);
+  }
+}
+
+/* Estilos para la paginación */
 .swiper-pagination-bullet {
   width: 12px;
   height: 12px;
-  background-color: white;
-  opacity: 0.5;
-  margin: 0 8px !important;
-  transition: opacity 0.3s ease, background-color 0.3s ease;
+  background-color: rgba(255, 255, 255, 0.5);
+  opacity: 1;
+  margin: 0 4px !important;
+  transition: background-color 0.3s ease;
 }
 
 .swiper-pagination-bullet-active {
-  background-color: #f0a500; /* Círculo naranja para la imagen activa */
-  opacity: 1;
+  background-color: #f0a500; /* Color para el indicador activo */
 }
