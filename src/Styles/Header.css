@@ -32,6 +32,8 @@
 }
 
 .logo {
+  box-sizing: content-box;
+  padding: 10px;
   height: 40px;
 }
 
