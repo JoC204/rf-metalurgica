@@ -3,20 +3,23 @@
   align-items: center;
   justify-content: center;
   height: 80px;
-  background-image: linear-gradient(
+  /* background-image: linear-gradient(
     to top,
     #00000000 0%,
-    #00000059 40%,
-    #00000061 50%,
+    #00000059 20%,
+    #00000061 60%,
     #0000008b 100%
-  );
+  ); */
   color: white;
   position: fixed;
   width: 100%;
+  border-radius: 0 0 40px 40px;
+  backdrop-filter: blur(8px);
   top: 0;
   left: 0;
   transition: transform 0.6s ease; /* Para la transición */
   z-index: 1000;
+  border-bottom: solid 1px #22529e;
 }
 
 .header.hidden {
@@ -35,6 +38,13 @@
   box-sizing: content-box;
   padding: 10px;
   height: 40px;
+  background: radial-gradient(
+    closest-side,
+    #47575e20,
+    #f7f3f30f,
+    #4c5dc01d,
+    #f7f3f300
+  );
 }
 
 .logo-link {
