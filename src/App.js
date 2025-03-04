@@ -7,6 +7,7 @@ import About from "./components/About"; // Importamos el nuevo componente
 import Contact from "./components/Contact"; // Importamos el nuevo componente
 import PageTemplate from "./components/PageTemplate"; // Importamos el nuevo componente
 import WhatsAppButton from "./components/WhatsAppButton";
+import Footer from "./components/Footer";
 
 const pages = [
   { id: "home", title: "Inicio", content: "Bienvenido a nuestra página principal." },
@@ -24,6 +25,7 @@ const App = () => {
           <Route path="contact" element={<Contact />} />
           <Route path="/:pageId" element={<PageTemplate pages={pages} />} />
         </Routes>
+      <Footer />
       <WhatsAppButton />
     </Router>
   );

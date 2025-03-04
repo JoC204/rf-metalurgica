@@ -14,12 +14,12 @@
   position: fixed;
   width: 100%;
   border-radius: 0 0 40px 40px;
-  backdrop-filter: blur(8px);
+  backdrop-filter: blur(3px);
   top: 0;
   left: 0;
   transition: transform 0.6s ease; /* Para la transición */
   z-index: 1000;
-  border-bottom: solid 1px #22529e;
+  border-bottom: solid 1px #84888f57;
 }
 
 .header.hidden {
