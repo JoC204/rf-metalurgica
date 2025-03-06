@@ -8,6 +8,9 @@ import WhatsappLogo from "../img/wts.svg";
 const Header = () => {
   const [scrolling, setScrolling] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const [menuTransition, setMenuTransition] = useState(false);
+
+ 
 
   useEffect(() => {
     const handleScroll = () => {
@@ -23,10 +26,18 @@ const Header = () => {
   }, []);
 
   // Cierra el menú si se hace clic en un enlace
-  const closeMenu = () => setMenuOpen(false);
+  const closeMenu = () => {
+    setMenuOpen(false);
+  
+    // Esperar a que la animación del menú termine antes de restaurar el blur
+    setTimeout(() => {
+      setMenuTransition(true);
+    }, 9000); // Ajusta el tiempo según la duración de la animación CSS
+  };
 
   return (
-    <header className={`header ${scrolling ? "hidden" : ""}`}>
+    <header className={`header ${scrolling ? "hidden" : ""} ${menuOpen ? "menu-active" : ""} ${menuTransition ? "transitioning" : ""}`}>
+
       <div className="header-content">
         <Link to="/" onClick={closeMenu} className="logo-link">
           <img className="logo" src={Logo} alt="Logo" />
