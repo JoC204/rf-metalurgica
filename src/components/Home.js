@@ -14,6 +14,8 @@ import "../Styles/Home.css";
 import imagen1 from "../img/carrusel-uno.jpeg";
 import imagen2 from "../img/carrusel-dos.jpeg";
 import imagen3 from "../img/carrusel-tres.jpeg";
+import imagen4 from "../img/rfMetalurgica.png";
+import imagen5 from "../img/rf-mesa-ia.jpg";
 
 const Home = () => {
   return (
@@ -33,18 +35,20 @@ const Home = () => {
       >
         <SwiperSlide>
           <div className="swiper-zoom-container">
-            <img src={imagen3} alt="Imagen 3" />
+              <img src={imagen3} alt="Imagen 3" />
             <div className="text-box">
-              <h2>Título de la imagen 3</h2>
-              <p>Descripción de la imagen 3. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <img className="logo-dos" src={imagen4} alt="Logo completo" />
+              <h2>Innovación y Precisión en Mecanizados Industriales</h2>
+              <p>Nos especializamos en la fabricación de piezas mecanizadas de alta calidad.</p>
               <button>Ver más</button>
             </div>
           </div>
         </SwiperSlide>
         <SwiperSlide>
           <div className="swiper-zoom-container">
-            <img src={imagen2} alt="Imagen 2" />
+              <img src={imagen2} alt="Imagen 2" />
             <div className="text-box">
+            {/* <img className="logo-dos" src={imagen4} alt="Logo completo" /> */}
               <h2>Título de la imagen 2</h2>
               <p>Descripción de la imagen 2. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
               <button>Ver más</button>
@@ -55,6 +59,7 @@ const Home = () => {
           <div className="swiper-zoom-container">
             <img src={imagen1} alt="Imagen 1" />
             <div className="text-box">
+            {/* <img className="logo-dos" src={imagen4} alt="Logo completo" /> */}
               <h2>Título de la imagen 1</h2>
               <p>Descripción de la imagen 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
               <button>Ver más</button>
@@ -62,17 +67,10 @@ const Home = () => {
           </div>
         </SwiperSlide>
       </Swiper>
-      <div className="lorem-ipsum">
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum.
-        </p>
-      </div>
+      <img className="rf-ia" src={imagen5} alt="Imagen 5" />
+      <h3 className="sobreNos">Sobre Nosotros</h3>
+      <h2 className="sobreNos">Tecnología y Experiencia al Servicio de la Industria</h2>
+      <p className="parrafo1">"Con años de experiencia en mecanizado CNC, ofrecemos soluciones personalizadas para distintos sectores industriales. Nos enfocamos en la innovación, la eficiencia y la mejora continua para garantizar productos que superen las expectativas de nuestros clientes."</p>
     </div>
   );
 };
