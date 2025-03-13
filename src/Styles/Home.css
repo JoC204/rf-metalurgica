@@ -43,7 +43,7 @@
 
 .rf-ia {
   display: block;
-  margin: 0.5rem auto;
+  margin: 2rem auto;
   width: 22rem;
   border-radius: 10px;
   box-shadow: black 3px 3px 17px 1px;
@@ -143,12 +143,8 @@
   background-color: #e69500;
 }
 
-.lorem-ipsum {
-  bottom: 0;
-  left: 0;
-  right: 0;
-  padding: 1rem;
-  background-color: rgba(0, 0, 0, 0.5);
-  color: white;
-  text-align: center;
+.trabajos {
+  display: grid;
+  margin: 2rem 0 ;
+  left: 9rem;
 }
