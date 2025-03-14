@@ -83,30 +83,29 @@ const Home = () => {
       </Swiper>
 
       {/* Seccion 2 */}
-      <div id="seccion-conocenos"></div>
-      <img className="rf-ia" src={imagen5} alt="Imagen 5" />
-      <h3 className="sobreNos">Sobre Nosotros</h3>
-      <h2 className="sobreNos">
-        Tecnología y Experiencia al Servicio de la Industria
-      </h2>
-      <p className="parrafo1">
-        "Con años de experiencia en mecanizado CNC, ofrecemos soluciones
-        personalizadas para distintos sectores industriales. Nos enfocamos en la
-        innovación, la eficiencia y la mejora continua para garantizar productos
-        que superen las expectativas de nuestros clientes."
-      </p>
-      
-      <img className="trabajos" src={imagen6} alt="Imagen 6" />
-      <h3 className="sobreNos">Sobre Nosotros</h3>
-      <h2 className="sobreNos">
-        Tecnología y Experiencia al Servicio de la Industria
-      </h2>
-      <p className="parrafo1">
-        "Con años de experiencia en mecanizado CNC, ofrecemos soluciones
-        personalizadas para distintos sectores industriales. Nos enfocamos en la
-        innovación, la eficiencia y la mejora continua para garantizar productos
-        que superen las expectativas de nuestros clientes."
-      </p>
+      <div className="seccion-dos">
+        <div id="seccion-conocenos"></div>
+        <img className="rf-ia" src={imagen5} alt="Imagen 5" />
+        <h3 className="sobreNos">Sobre Nosotros</h3>
+        <h2 className="sobreNos">
+          Tecnología y Experiencia al Servicio de la Industria
+        </h2>
+        <p className="parrafo1">
+          "Con años de experiencia en mecanizado CNC, ofrecemos soluciones
+          personalizadas para distintos sectores industriales. Nos enfocamos en
+          la innovación, la eficiencia y la mejora continua para garantizar
+          productos que superen las expectativas de nuestros clientes."
+        </p>
+
+        <img className="trabajos" src={imagen6} alt="Imagen 6" />
+        <h3 className="sobreNos">Nuestros Trabajos</h3>
+        <h2 className="sobreNos">Calidad y Precisión en Acción</h2>
+        <p className="parrafo1">
+          "Cada proyecto es un desafío que superamos con precisión y calidad.
+          Explora nuestra galería y conoce los trabajos que nos han convertido
+          en referentes del mecanizado."
+        </p>
+      </div>
     </div>
   );
 };
