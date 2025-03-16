@@ -6,22 +6,21 @@
 
 /* Estilos para el carrusel */
 .mySwiper {
-  margin: 0;
+  margin: 0 0 3rem 0;
   padding: 0;
   width: 100%;
   height: 100vh;
   z-index: 100;
-  border-radius: 0 0 10px 10px;
+  /* border-radius: 0 0 10px 10px; */
 }
 
 /* Centrar el contenido de cada slide */
 .swiper-slide {
   display: flex;
   align-items: center;
-  justify-content: center; 
+  justify-content: center;
   height: 100%;
 }
-
 
 /* Contenedor para el zoom */
 .swiper-zoom-container {
@@ -40,7 +39,6 @@
   display: block;
 }
 
-
 /* Por defecto, los slides inactivos no tendrán animación */
 .swiper-slide .swiper-zoom-container img {
   animation: none;
@@ -51,29 +49,77 @@
 .logo-dos {
   width: 10rem !important;
 }
+/* Contenedor para secciones con imagen a pantalla completa */
+#seccion-conocenos,
+#seccion-trabajos {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* Ocupa toda la altura del viewport */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
 
-.rf-ia {
-  display: block;
-  margin: 2rem auto;
-  width: 22rem;
-  border-radius: 10px;
-  box-shadow: black 3px 3px 17px 1px;
+/* Ajuste de las imágenes para que ocupen el 100% de la sección */
+.rf-ia{
+  position: absolute;
+  width: 90%;
+  height: auto;
+  top: 1rem;
+  filter: blur(0.5px) brightness(100%);
+  border-radius: 5px;
 }
 .trabajos {
-  display: block;
-  margin: 2rem auto;
-  width: 22rem;
-  border-radius: 10px;
-  box-shadow: black 3px 3px 17px 1px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; ; 
+  filter: blur(1px) brightness(50%);
+  z-index: 1;
 }
+
+/* Contenedor de texto centrado sobre la imagen */
+.rf-ia-text {
+  position: relative;
+  font-size: 18px;
+  z-index: 2;
+  color: black;
+  max-width: 100%;
+  padding: 0.8rem;
+  margin-top: 2rem;
+  /* text-shadow: 2px 2px 5px rgba(0, 0, 0, 4.0); */
+}
+.trabajos-text {
+  position: relative;
+  font-size: 18px;
+  z-index: 2;
+  color: white;
+  max-width: 100%;
+  padding: 0.8rem;
+  margin-top: 2rem;
+  /* text-shadow: 2px 2px 5px rgba(0, 0, 0, 4.0); */
+}
+
+
 .sobreNos {
   text-align: center;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.6rem;
 }
+.sobreNos-h3 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #f0a500;
+  
+  padding: 10rem 0 2rem 0;
+}
+
 .parrafo1 {
   text-align: center;
   margin-top: 1rem;
-  margin-bottom: 1rem;
+  margin-bottom: 5rem;
 }
 
 /* Solo el slide activo tendrá la animación de zoom iniciando desde scale(1) */
@@ -160,4 +206,3 @@
 .text-box button:hover {
   background-color: #e69500;
 }
-

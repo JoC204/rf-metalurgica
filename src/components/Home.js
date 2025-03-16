@@ -22,7 +22,7 @@ const Home = () => {
   return (
     <div className="home">
       <Swiper
-        spaceBetween={5}
+        spaceBetween={10}
         modules={[Autoplay, Pagination, Zoom]}
         slidesPerView={1}
         loop={true}
@@ -61,7 +61,9 @@ const Home = () => {
                 mecanizados complejos, cada imagen refleja nuestro compromiso
                 con la excelencia."
               </p>
-              <button>Ver más</button>
+              <a href="#seccion-trabajos">
+                <button>Ver Trabajos</button>
+              </a>
             </div>
           </div>
         </SwiperSlide>
@@ -69,12 +71,12 @@ const Home = () => {
           <div className="swiper-zoom-container">
             <img src={imagen1} alt="Imagen 1" />
             <div className="text-box">
-              <h2>Título de la imagen 1</h2>
+              <h2>Estamos Aquí para Ayudarte</h2>
               <p>
-                Descripción de la imagen 1. Lorem ipsum dolor sit amet,
-                consectetur adipiscing elit.
+              "Si tienes una idea o un requerimiento específico, nuestro equipo está listo para asesorarte. Escríbenos y trabajemos juntos en tu proyecto."
+              "Si tienes una idea o un requerimiento específico, nuestro equipo está listo para asesorarte. Escríbenos y trabajemos juntos en tu proyecto."
               </p>
-              <button>Ver más</button>
+              <button>Contactanos</button>
             </div>
           </div>
         </SwiperSlide>
@@ -82,27 +84,34 @@ const Home = () => {
 
       {/* Sección 2 */}
       <div className="seccion-dos">
-        <div id="seccion-conocenos"></div>
-        <img className="rf-ia" src={imagen5} alt="Imagen 5" />
-        <h3 className="sobreNos">Sobre Nosotros</h3>
-        <h2 className="sobreNos">
-          Tecnología y Experiencia al Servicio de la Industria
-        </h2>
-        <p className="parrafo1">
-          "Con años de experiencia en mecanizado CNC, ofrecemos soluciones
-          personalizadas para distintos sectores industriales. Nos enfocamos en
-          la innovación, la eficiencia y la mejora continua para garantizar
-          productos que superen las expectativas de nuestros clientes."
-        </p>
-
-        <img className="trabajos" src={imagen6} alt="Imagen 6" />
-        <h3 className="sobreNos">Nuestros Trabajos</h3>
-        <h2 className="sobreNos">Calidad y Precisión en Acción</h2>
-        <p className="parrafo1">
-          "Cada proyecto es un desafío que superamos con precisión y calidad.
-          Explora nuestra galería y conoce los trabajos que nos han convertido
-          en referentes del mecanizado."
-        </p>
+        <div id="seccion-conocenos">
+          <img className="rf-ia" src={imagen5} alt="Imagen 5" />
+          <div className="rf-ia-text">
+            <h3 className="sobreNos-h3">Sobre Nosotros</h3>
+            <h2 className="sobreNos">
+              Tecnología y Experiencia al Servicio de la Industria
+            </h2>
+            <p className="parrafo1">
+              "Con años de experiencia en mecanizado CNC, ofrecemos soluciones
+              personalizadas para distintos sectores industriales. Nos enfocamos
+              en la innovación, la eficiencia y la mejora continua para
+              garantizar productos que superen las expectativas de nuestros
+              clientes."
+            </p>
+          </div>
+        </div>
+        <div id="seccion-trabajos">
+          <img className="trabajos" src={imagen6} alt="Imagen 6" />
+          <div className="trabajos-text">
+            <h3 className="sobreNos">Nuestros Trabajos</h3>
+            <h1 className="sobreNos">Calidad y Precisión en Acción</h1>
+            <p className="parrafo1">
+              "Cada proyecto es un desafío que superamos con precisión y
+              calidad. Explora nuestra galería y conoce los trabajos que nos han
+              convertido en referentes del mecanizado."
+            </p>
+          </div>
+        </div>
       </div>
     </div>
   );
