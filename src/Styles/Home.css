@@ -18,7 +18,10 @@
 .swiper-slide {
   display: flex;
   align-items: center;
+  justify-content: center; 
+  height: 100%;
 }
+
 
 /* Contenedor para el zoom */
 .swiper-zoom-container {
@@ -29,6 +32,14 @@
   overflow: hidden;
   position: relative;
 }
+
+.swiper-zoom-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
 
 /* Por defecto, los slides inactivos no tendrán animación */
 .swiper-slide .swiper-zoom-container img {

@@ -2,8 +2,8 @@ import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination, Zoom } from "swiper/modules";
 
-// Importa los estilos de Swiper
 import "swiper/css";
+import "swiper/css/autoplay";
 import "swiper/css/pagination";
 import "swiper/css/zoom";
 
@@ -22,17 +22,17 @@ const Home = () => {
   return (
     <div className="home">
       <Swiper
-        spaceBetween={10}
+        spaceBetween={5}
         modules={[Autoplay, Pagination, Zoom]}
         slidesPerView={1}
         loop={true}
         autoplay={{
-          delay: 8000, // Cambio automático cada 8 segundos
+          delay: 8000,
           disableOnInteraction: false,
         }}
         pagination={{ clickable: true }}
         className="mySwiper"
-        zoom={true}
+        zoom={false}
       >
         <SwiperSlide>
           <div className="swiper-zoom-container">
@@ -45,7 +45,7 @@ const Home = () => {
                 alta calidad.
               </p>
               <a href="#seccion-conocenos">
-                <button>Conocenos</button>
+                <button>Conócenos</button>
               </a>
             </div>
           </div>
@@ -54,8 +54,7 @@ const Home = () => {
           <div className="swiper-zoom-container">
             <img src={imagen2} alt="Imagen 2" />
             <div className="text-box">
-              {/* <img className="logo-dos" src={imagen4} alt="Logo completo" /> */}
-              <h2> Nuestra Experiencia en Cada Detalle</h2>
+              <h2>Nuestra Experiencia en Cada Detalle</h2>
               <p>
                 "Explora los proyectos que hemos realizado y descubre la calidad
                 y precisión de nuestro trabajo. Desde piezas simples hasta
@@ -70,7 +69,6 @@ const Home = () => {
           <div className="swiper-zoom-container">
             <img src={imagen1} alt="Imagen 1" />
             <div className="text-box">
-              {/* <img className="logo-dos" src={imagen4} alt="Logo completo" /> */}
               <h2>Título de la imagen 1</h2>
               <p>
                 Descripción de la imagen 1. Lorem ipsum dolor sit amet,
@@ -82,7 +80,7 @@ const Home = () => {
         </SwiperSlide>
       </Swiper>
 
-      {/* Seccion 2 */}
+      {/* Sección 2 */}
       <div className="seccion-dos">
         <div id="seccion-conocenos"></div>
         <img className="rf-ia" src={imagen5} alt="Imagen 5" />

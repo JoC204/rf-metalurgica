@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import Navbar from "../components/NavBar"; // Ajusta la ruta si es necesario
+import Navbar from "./NavBar"; // Ajusta la ruta si es necesario
 import "../Styles/Header.css";
 import Logo from "../img/rf-logo.png";
 import WhatsappLogo from "../img/wts.svg";
@@ -10,8 +10,6 @@ const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [menuTransition, setMenuTransition] = useState(false);
 
- 
-
   useEffect(() => {
     const handleScroll = () => {
       const scrollTop = window.scrollY;
@@ -19,25 +17,23 @@ const Header = () => {
     };
 
     window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   // Cierra el menú si se hace clic en un enlace
   const closeMenu = () => {
     setMenuOpen(false);
-  
+
     // Esperar a que la animación del menú termine antes de restaurar el blur
     setTimeout(() => {
       setMenuTransition(true);
-    }, 9000); // Ajusta el tiempo según la duración de la animación CSS
+    }, 900); // Ajusta el tiempo según la duración de la animación CSS
   };
 
   return (
-    <header className={`header ${scrolling ? "hidden" : ""} ${menuOpen ? "menu-active" : ""} ${menuTransition ? "transitioning" : ""}`}>
-
+    <header
+      className={`header ${scrolling ? "hidden" : ""} ${menuOpen ? "menu-active" : ""} ${menuTransition ? "transitioning" : ""}`}
+    >
       <div className="header-content">
         <Link to="/" onClick={closeMenu} className="logo-link">
           <img className="logo" src={Logo} alt="Logo" />
@@ -58,7 +54,6 @@ const Header = () => {
           >
             <img className="wtsLogo" src={WhatsappLogo} alt="WhatsApp Logo" />
           </a>
-          {/* Agrega más logos de redes sociales aquí */}
         </div>
       </div>
     </header>

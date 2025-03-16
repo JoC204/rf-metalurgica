@@ -1,5 +1,5 @@
 import React from "react";
-import "../Styles/About.css";
+import "../Styles/About.css"; // Verifica que la ruta sea correcta
 
 const Home = ({
   title = "Bienvenido a About",

@@ -1,5 +1,5 @@
 import React from "react";
-import "../Styles/Contact.css";
+import "../Styles/Contact.css"; // Verifica que la ruta sea correcta
 
 const Home = ({
   title = "Bienvenido a Contact",

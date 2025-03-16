@@ -12,11 +12,11 @@ const WhatsAppButton = () => {
     };
 
     window.addEventListener("scroll", handleScroll);
-
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
   return (
     <a
       className={`WhatsAppButton ${scrolling ? "hidden" : "visible"}`}
@@ -25,7 +25,7 @@ const WhatsAppButton = () => {
       rel="noopener noreferrer"
       style={styles.container}
     >
-      <img className="wtsLogo" src={WhatsappLogo} alt="WhatsApp Logo" />
+      <img className="wtsLogo" src={WhatsappLogo} alt="WhatsApp Logo" style={styles.icon} />
     </a>
   );
 };

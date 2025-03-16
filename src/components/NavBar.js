@@ -7,12 +7,14 @@ const Navbar = ({ menuOpen, closeMenu }) => {
     const link = event.target;
     const parentLi = link.parentElement;
 
-    parentLi.classList.add("active");
+    if (parentLi) {
+      parentLi.classList.add("active");
 
-    setTimeout(() => {
-      parentLi.classList.remove("active");
-      closeMenu();
-    }, 300);
+      setTimeout(() => {
+        parentLi.classList.remove("active");
+        closeMenu();
+      }, 300);
+    }
   };
 
   return (
