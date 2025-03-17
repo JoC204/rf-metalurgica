@@ -1,26 +1,36 @@
 .footer {
     width: 100%;
-    background-color: #1a202c;
+    background-color: #203052;
     color: white;
     padding: 1rem 0;
     text-align: center;
     font-size: 0.875rem;
+    border-top: #28316ead 5px solid;
+  }
+  .logoMetal {
+    display: flex;
+    position: absolute;
+    width: 10rem;
+    height: auto;
   }
   
   .footer-container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 1rem;
+    margin-bottom: 5rem;
   }
   
   .footer nav {
-    display: flex;
+    /* display: flex; */
     justify-content: center;
     gap: 1rem;
     margin-top: 0.5rem;
   }
   
   .footer a {
+    display: block;
+    padding-bottom: 2rem;
     color: white;
     text-decoration: none;
     transition: color 0.3s ease;
@@ -30,6 +40,12 @@
     color: #a0aec0;
   }
   
+.boton-footer {
+  display: flex;
+  margin-left: 2rem;
+  margin-bottom: 1rem;
+}
+
   @media (min-width: 768px) {
     .footer {
       font-size: 1rem;

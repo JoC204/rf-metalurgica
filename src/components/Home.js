@@ -73,10 +73,15 @@ const Home = () => {
             <div className="text-box">
               <h2>Estamos Aquí para Ayudarte</h2>
               <p>
-              "Si tienes una idea o un requerimiento específico, nuestro equipo está listo para asesorarte. Escríbenos y trabajemos juntos en tu proyecto."
-              "Si tienes una idea o un requerimiento específico, nuestro equipo está listo para asesorarte. Escríbenos y trabajemos juntos en tu proyecto."
+                "Si tienes una idea o un requerimiento específico, nuestro
+                equipo está listo para asesorarte. Escríbenos y trabajemos
+                juntos en tu proyecto." "Si tienes una idea o un requerimiento
+                específico, nuestro equipo está listo para asesorarte.
+                Escríbenos y trabajemos juntos en tu proyecto."
               </p>
-              <button>Contactanos</button>
+              <a href="#seccion-footer">
+                <button>Contactanos</button>
+              </a>
             </div>
           </div>
         </SwiperSlide>
@@ -113,6 +118,7 @@ const Home = () => {
           </div>
         </div>
       </div>
+      <div id="seccion-footer"></div>
     </div>
   );
 };
