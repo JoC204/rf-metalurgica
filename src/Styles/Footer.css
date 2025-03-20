@@ -6,12 +6,7 @@
     text-align: center;
     font-size: 0.875rem;
     border-top: #28316ead 5px solid;
-  }
-  .logoMetal {
-    display: flex;
-    position: absolute;
-    width: 10rem;
-    height: auto;
+    font-weight: 100;
   }
   
   .footer-container {
@@ -48,7 +43,7 @@
 
   @media (min-width: 768px) {
     .footer {
-      font-size: 1rem;
+      font-size: 1.1rem;
     }
   }
   

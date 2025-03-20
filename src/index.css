@@ -1,3 +1,7 @@
+* {
+  font-family: 'Roboto', sans-serif;
+}
+
 html,
 body,
 #root {
@@ -5,5 +9,6 @@ body,
   padding: 0;
   font-size: 16px;
   background-attachment: fixed;
-  background-image: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
+  /* background-image: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%); */
+  background-image: linear-gradient(to top, #dfe9f3 0%, white 100%);
 }

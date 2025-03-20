@@ -6,12 +6,10 @@
 
 /* Estilos para el carrusel */
 .mySwiper {
-  margin: 0 0 3rem 0;
   padding: 0;
   width: 100%;
   height: 100vh;
   z-index: 100;
-  /* border-radius: 0 0 10px 10px; */
 }
 
 /* Centrar el contenido de cada slide */
@@ -36,103 +34,17 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  display: block;
 }
 
-/* Por defecto, los slides inactivos no tendrán animación */
-.swiper-slide .swiper-zoom-container img {
-  animation: none;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-.logo-dos {
-  width: 10rem !important;
-}
-/* Contenedor para secciones con imagen a pantalla completa */
-#seccion-conocenos,
-#seccion-trabajos {
-  position: relative;
-  width: 100%;
-  height: 100vh; /* Ocupa toda la altura del viewport */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-}
-
-/* Ajuste de las imágenes para que ocupen el 100% de la sección */
-.rf-ia{
-  position: absolute;
-  width: 90%;
-  height: auto;
-  top: 1rem;
-  filter: blur(0.5px) brightness(100%);
-  border-radius: 5px;
-}
-.trabajos {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover; ; 
-  filter: blur(1px) brightness(50%);
-  z-index: 1;
-}
-
-/* Contenedor de texto centrado sobre la imagen */
-.rf-ia-text {
-  position: relative;
-  font-size: 18px;
-  z-index: 2;
-  color: black;
-  max-width: 100%;
-  padding: 0.8rem;
-  margin-top: 2rem;
-  /* text-shadow: 2px 2px 5px rgba(0, 0, 0, 4.0); */
-}
-.trabajos-text {
-  position: relative;
-  font-size: 18px;
-  z-index: 2;
-  color: white;
-  max-width: 100%;
-  padding: 0.8rem;
-  margin-top: 2rem;
-  /* text-shadow: 2px 2px 5px rgba(0, 0, 0, 4.0); */
-}
-
-
-.sobreNos {
-  text-align: center;
-  margin-bottom: 0.6rem;
-}
-.sobreNos-h3 {
-  font-size: 2rem;
-  font-weight: 700;
-  color: #f0a500;
-  
-  padding: 10rem 0 2rem 0;
-}
-
-.parrafo1 {
-  text-align: center;
-  margin-top: 1rem;
-  margin-bottom: 5rem;
-}
-
-/* Solo el slide activo tendrá la animación de zoom iniciando desde scale(1) */
+/* Solo el slide activo tendrá la animación de zoom */
 .swiper-slide-active .swiper-zoom-container img {
-  animation: subtleZoom 8000ms ease-in-out infinite alternate;
+  animation: subtleZoom 7000ms ease-in-out infinite alternate;
 }
 
-/* Definición de la animación: inicia en scale(1) para evitar cortes */
 @keyframes subtleZoom {
   0% {
     transform: scale(1);
   }
-
   100% {
     transform: scale(1.08);
   }
@@ -140,8 +52,8 @@
 
 /* Estilos para la paginación */
 .swiper-pagination-bullet {
-  width: 0px;
-  height: 0px;
+  width: 10px;
+  height: 10px;
   background-color: rgba(255, 255, 255, 0.5);
   opacity: 1;
   margin: 0 4px !important;
@@ -149,26 +61,26 @@
 }
 
 .swiper-pagination-bullet-active {
-  background-color: #f0a500; /* Color para el indicador activo */
+  background-color: #f0a500;
 }
 
-/* Estilos para el cuadro de texto */
+/* Estilos para el cuadro de texto dentro del carrusel */
 .text-box {
   position: absolute;
-  bottom: 10%;
+  top: 80%;
   left: 50%;
-  transform: translateX(-20%);
-  /* background-color: rgba(0, 0, 0, 0.171); */
-  /* border-radius: 10px; */
-  text-shadow: #000 1px 1px 3px;
-  color: white;
-  padding: 20px;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
-  width: 80%;
-  max-width: 600px;
+  text-shadow: #000 5px 5px 6px;
+  color: white;
+  width: 100%;
+  max-width: 400px;
   opacity: 0;
   animation: fadeInUp 2s ease-in-out forwards;
-  animation-delay: 0.7s; /* Retraso para que aparezca después de que la imagen esté visible */
+  animation-delay: 0.6s;
 }
 
 @keyframes fadeInUp {
@@ -178,18 +90,19 @@
   }
   100% {
     opacity: 1;
-    transform: translateX(-50%) translateY(-20%);
+    transform: translateX(-50%) translateY(-150%);
   }
 }
 
 .text-box h2 {
+  width: 100%;
   margin: 0 0 10px 0;
-  font-size: 24px;
+  font-size: 2rem;
 }
 
 .text-box p {
   margin: 0 0 20px 0;
-  font-size: 16px;
+  font-size: 1rem;
 }
 
 .text-box button {
@@ -205,4 +118,205 @@
 
 .text-box button:hover {
   background-color: #e69500;
+}
+
+.logo-dos img {
+  width: 19rem !important;
+  margin: 0;
+}
+
+/* Sección 2 - Sobre Nosotros y Trabajos */
+.seccion-dos {
+  width: 100%;
+}
+
+#seccion-conocenos,
+#seccion-trabajos {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+/* Ajuste de las imágenes para que ocupen el 100% de la sección */
+.rf-ia {
+  position: absolute;
+  width: 95%;
+  height: auto;
+  top: 0.5rem;
+  filter: blur(0.5px) brightness(100%);
+  border-radius: 5px;
+}
+
+.trabajos {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 5;
+  filter: brightness(50%);
+}
+
+/* Contenedores de texto sobre las imágenes */
+.rf-ia-text {
+  position: relative;
+  font-size: 18px;
+  z-index: 2;
+  color: black;
+  max-width: 100%;
+  padding: 0.8rem;
+  margin-top: 2rem;
+}
+
+.trabajos-text {
+  position: absolute;
+  font-size: 18px;
+  z-index: 10;
+  color: white;
+  max-width: 100%;
+  padding: 0.8rem;
+  margin-top: 2rem;
+}
+
+.button-link-galeria {
+  text-decoration: none;
+  outline: none;
+  background-color: #f0a400;
+  color: white;
+  border: none;
+  padding: 10px 10px;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.button-link-galeria a {
+  text-decoration: none;
+  color: white;
+}
+.button-link-galeria:hover {
+  background-color: #e69500;
+}
+
+.trabajos-text h3,
+.sobreNos-h3 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #f0a500;
+  padding: 3rem 0 1rem 0;
+  text-shadow: #000 2px 2px 7px;
+}
+
+.sobreNos {
+  font-size: 1.5rem;
+  text-align: center;
+  margin-bottom: 0.6rem;
+}
+
+.parrafo-home {
+  font-size: 1.2rem;
+  text-align: center;
+  margin: 2rem;
+  font-weight: 300;
+}
+.button-link-about {
+  text-decoration: none;
+  outline: none;
+  background-color: #f0a400;
+  color: white;
+  border: none;
+  padding: 10px 10px;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.button-link-about a {
+  text-decoration: none;
+  color: white;
+}
+.button-link-about:hover {
+  background-color: #e69500;
+}
+
+/* Estilos responsive */
+@media (max-width: 768px) {
+  .imagen-mobile-left {
+    object-position: 10%;
+  }
+  .imagen-mobile-right {
+    object-position: 60%;
+  }
+  .swiper-slide .swiper-zoom-container img {
+    filter: brightness(70%);
+  }
+}
+
+@media (max-width: 370px) {
+  .imagen-mobile-left {
+    object-position: 10%;
+  }
+  .imagen-mobile-right {
+    object-position: 60%;
+  }
+  .swiper-slide .swiper-zoom-container img {
+    filter: brightness(70%);
+  }
+
+  @keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateX(-50%) translateY(100%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(-50%) translateY(-120%);
+    }
+  }
+
+  .trabajos-text h3,
+  .sobreNos-h3 {
+    font-size: 1.5rem;
+  }
+  .sobreNos {
+    font-size: 1rem;
+  }
+
+  .parrafo-home {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 321px) {
+  @keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateX(-50%) translateY(100%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(-50%) translateY(-120%);
+    }
+  }
+  .text-box h2 {
+    font-size: 1.5rem;
+  }
+  .text-box p {
+    font-size: 0.8rem;
+  }
+
+  .trabajos-text h3,
+  .sobreNos-h3 {
+    font-size: 1.5rem;
+  }
+  .sobreNos {
+    font-size: 1rem;
+  }
+
+  .parrafo-home {
+    font-size: 0.8rem;
+  }
 }

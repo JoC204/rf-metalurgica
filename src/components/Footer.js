@@ -5,14 +5,14 @@ import { FiPhone } from "react-icons/fi";
 import { LuMail } from "react-icons/lu";
 import { IoLocationOutline } from "react-icons/io5";
 import { FaChevronUp } from "react-icons/fa";
-import Logo from "../img/rfMetalurgica.png";
+
 
 const Footer = () => {
   return (
     <footer className="footer">
       <div className="footer-container">
         <nav>
-        <img className="logoMetal" src={Logo} alt="Logo RF Metalúrgica" />
+        
           <a href="/">Inicio</a>
           <a href="/">Sobre Nosotros</a>
           <a href="/">Trabajos</a>
