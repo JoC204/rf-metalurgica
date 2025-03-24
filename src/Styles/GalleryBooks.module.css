@@ -1,0 +1,77 @@
+.galleryContainer {
+  position: relative;
+  padding: 2rem 1rem;
+  min-height: 100vh;
+  background-image: url("../img/bannerRf.jpg"); /* reemplazá por tu ruta */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; /* 👈 Parallax */
+  background-repeat: no-repeat;
+  overflow-x: hidden;
+}
+
+/* Carrusel horizontal */
+.carousel {
+  display: flex;
+  overflow-x: auto;
+  gap: 1rem;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  margin-top: 6rem;
+}
+
+.cover {
+  flex: 0 0 auto;
+  width: 80vw;
+  scroll-snap-align: start;
+  position: relative;
+}
+
+.cover img {
+  width: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.cover p {
+  position: absolute;
+  bottom: 8px;
+  left: 12px;
+  color: white;
+  font-weight: bold;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 4px 8px;
+  border-radius: 6px;
+}
+
+/* Book de imágenes */
+.book {
+  margin-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+}
+
+.book img {
+  width: 45vw;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* Visor modal */
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.95);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 10px;
+}

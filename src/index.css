@@ -1,5 +1,6 @@
 * {
   font-family: 'Roboto', sans-serif;
+  box-sizing: border-box;
 }
 
 html,
@@ -9,6 +10,17 @@ body,
   padding: 0;
   font-size: 16px;
   background-attachment: fixed;
-  /* background-image: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%); */
   background-image: linear-gradient(to top, #dfe9f3 0%, white 100%);
+  width: 100.5%;
+  /* Mantener scroll funcional, pero oculto */
+  overflow-y: scroll;
+  scrollbar-width: none;         /* Firefox */
+  -ms-overflow-style: none;      /* IE y Edge antiguo */
+}
+
+/* Ocultar scroll en navegadores Webkit (Chrome, Safari, Edge Chromium) */
+html::-webkit-scrollbar,
+body::-webkit-scrollbar,
+#root::-webkit-scrollbar {
+  display: none;
 }

@@ -1,12 +1,13 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import "./Styles/Global.css";
+import ScrollToTop from "./components/ScrollToTop";
 import Header from "./components/Header";
-import Home from "./components/Home"; // Importamos el nuevo componente
-import About from "./components/About"; // Importamos el nuevo componente
-// import Gallery from "./components/Gallery"; 
-import Contact from "./components/Contact"; // Importamos el nuevo componente
-import PageTemplate from "./components/PageTemplate"; // Importamos el nuevo componente
+import Home from "./components/Home"; 
+import About from "./components/About";
+import Gallery from "./components/GalleryBooks"; 
+import Contact from "./components/Contact";
+import PageTemplate from "./components/PageTemplate";
 import WhatsAppButton from "./components/WhatsAppButton";
 import Footer from "./components/Footer";
 
@@ -19,12 +20,13 @@ const pages = [
 const App = () => {
   return (
     <Router>
+      <ScrollToTop />
       <Header />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="about" element={<About />} />
-          {/* <Route path="gallery" element={<Gallery />} /> */}
           <Route path="contact" element={<Contact />} />
+          <Route path="gallery" element={<Gallery />} />
           <Route path="/:pageId" element={<PageTemplate pages={pages} />} />
         </Routes>
       <Footer />
