@@ -43,7 +43,7 @@ const Home = () => {
             <img className="imagen-mobile-right" src={imagen3} alt="Imagen 3" />
             <div className="text-box">
               <div className="logo-dos">
-                <img  src={imagen4} alt="Logo completo" />
+                <img src={imagen4} alt="Logo completo" />
               </div>
               <h2>Innovación y Precisión en Mecanizados Industriales</h2>
               <p>

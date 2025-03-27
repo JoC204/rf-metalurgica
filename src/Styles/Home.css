@@ -56,7 +56,6 @@
   height: 10px;
   background-color: rgba(255, 255, 255, 0.5);
   opacity: 1;
-  margin: 0 4px !important;
   transition: background-color 0.3s ease;
 }
 
@@ -65,7 +64,7 @@
 }
 
 /* Estilos para el cuadro de texto dentro del carrusel */
-.text-box {
+.swiper-zoom-container .text-box {
   position: absolute;
   top: 80%;
   left: 50%;
@@ -94,14 +93,17 @@
   }
 }
 
+
 .text-box h2 {
   width: 100%;
   margin: 0 0 10px 0;
+  padding: 0 20px;
   font-size: 2rem;
 }
 
 .text-box p {
   margin: 0 0 20px 0;
+  padding: 0 20px;
   font-size: 1rem;
 }
 
@@ -121,7 +123,7 @@
 }
 
 .logo-dos img {
-  width: 19rem !important;
+  width: 17rem !important;
   margin: 0;
 }
 
@@ -253,6 +255,9 @@
   .swiper-slide .swiper-zoom-container img {
     filter: brightness(70%);
   }
+  .text-box {
+    top: 90%;
+  }
 }
 
 @media (max-width: 370px) {
@@ -273,7 +278,7 @@
     }
     100% {
       opacity: 1;
-      transform: translateX(-50%) translateY(-120%);
+      transform: translateX(-50%) translateY(-160%);
     }
   }
 
@@ -287,6 +292,14 @@
 
   .parrafo-home {
     font-size: 1rem;
+  }
+
+  .text-box h2 {
+    font-size: 1.5rem;
+    padding: 0 20px;
+  }
+  .text-box p {
+    font-size: 0.8rem;
   }
 }
 
@@ -303,6 +316,7 @@
   }
   .text-box h2 {
     font-size: 1.5rem;
+    padding: 0 20px;
   }
   .text-box p {
     font-size: 0.8rem;

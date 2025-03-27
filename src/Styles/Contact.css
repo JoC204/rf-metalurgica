@@ -1,3 +1,56 @@
 .contact {
-    margin-top: 5rem;
-  }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: sans-serif;
+  background-color: #f8f8f8;
+}
+
+.contact-image {
+  width: 100%;
+  height: 100vh;
+  background-image: url('../img/img-contact.jpeg');
+  background-size: cover;
+  background-position: center;
+}
+
+.contact-content {
+  width: 90%;
+  max-width: 500px;
+  padding: 2rem 1rem;
+  text-align: left;
+}
+
+.contact-content h2,
+.contact-content h3 {
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.contact-info p {
+  display: flex;
+  align-items: center;
+  margin: 0.5rem 0;
+  color: #555;
+}
+
+.icon {
+  margin-right: 0.5rem;
+  color: #333;
+}
+
+.social-icons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.social-icons svg {
+  font-size: 1.5rem;
+  color: #555;
+  transition: color 0.3s;
+}
+
+.social-icons svg:hover {
+  color: #000;
+}

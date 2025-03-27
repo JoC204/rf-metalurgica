@@ -26,12 +26,12 @@ const Navbar = ({ menuOpen, closeMenu }) => {
       </li>
       <li className="nav-link about">
         <Link to="/about" onClick={handleLinkClick}>
-          About
+          Nosotros
         </Link>
       </li>
-      <li className="nav-link contact">
+      <li className="nav-link contacto">
         <Link to="/contact" onClick={handleLinkClick}>
-          Contact
+          Contacto
         </Link>
       </li>
     </ul>

@@ -55,7 +55,7 @@ const Footer = () => {
       </div>
       <button
         className="boton-footer"
-        onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+        onClick={() => window.scrollTo({ top: 0, behavior: "auto" })}
       >
         <FaChevronUp />
       </button>
