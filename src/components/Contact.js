@@ -26,7 +26,7 @@ const Contact = () => {
               </p>
             </div>
             <div className="contact-info-text">
-              <h3>Teléfonos</h3>
+              <h3>Teléfono</h3>
               <p>+341-156 579576</p>
             </div>
           </div>
@@ -68,17 +68,27 @@ const Contact = () => {
           </div>
 
           <div className="redes">
-          <h3>Nuestras redes</h3>
-          <div className="social-icons">
-            <FaInstagram />
-            <FaWhatsapp />
-            <FaLinkedinIn />
-            <FaYoutube />
-          </div>
+            <h3>Nuestras redes</h3>
+            <div className="social-icons">
+              <FaInstagram />
+              <FaWhatsapp />
+              <FaLinkedinIn />
+              <FaYoutube />
+            </div>
           </div>
         </div>
       </div>
       <Formulario />
+      <iframe
+        title="Google Maps"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13383.018664233903!2d-60.68740708517613!3d-33.01024297882949!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95b7ac00cff6cb7f%3A0x6edb4a65f8989672!2sAv.%20Ovidio%20Lagos%206335%2C%20S2000%20Rosario%2C%20Santa%20Fe!5e0!3m2!1ses!2sar!4v1743126249689!5m2!1ses!2sar"
+        width="auto"
+        height="450"
+        style={{ border: 0 }}
+        allowFullScreen=""
+        loading="lazy"
+        referrerPolicy="no-referrer-when-downgrade"
+      ></iframe>
     </div>
   );
 };

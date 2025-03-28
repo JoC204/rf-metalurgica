@@ -16,6 +16,7 @@ body,
   overflow-y: scroll;
   scrollbar-width: none;         /* Firefox */
   -ms-overflow-style: none;      /* IE y Edge antiguo */
+  overflow-x: hidden;
 }
 
 /* Ocultar scroll en navegadores Webkit (Chrome, Safari, Edge Chromium) */

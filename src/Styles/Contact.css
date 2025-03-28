@@ -4,6 +4,7 @@
   align-items: center;
   font-family: sans-serif;
   background-color: #f8f8f8;
+  
 }
 
 .contact-image {
@@ -69,4 +70,7 @@
 
 .social-icons svg:hover {
   color: #000;
+}
+iframe {
+  width: 100%;
 }
