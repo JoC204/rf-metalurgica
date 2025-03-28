@@ -1,5 +1,6 @@
 import React from "react";
 import "../Styles/Contact.css";
+import Formulario from "../components/Formulario";
 import {
   FaEnvelope,
   FaClock,
@@ -77,6 +78,7 @@ const Contact = () => {
           </div>
         </div>
       </div>
+      <Formulario />
     </div>
   );
 };
