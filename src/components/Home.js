@@ -16,7 +16,7 @@ import imagen1 from "../img/carrusel-uno.jpeg";
 import imagen2 from "../img/carrusel-dos.jpeg";
 import imagen3 from "../img/carrusel-tres.jpeg";
 import imagen4 from "../img/rfMetalurgica.png";
-import imagen5 from "../img/rf-mesa-ia-tornillos.jpg";
+import imagen5 from "../img/rf-nosotros.jpg";
 import imagen6 from "../img/piezasUno.jpg";
 
 const Home = () => {
