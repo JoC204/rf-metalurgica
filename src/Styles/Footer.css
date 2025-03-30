@@ -7,6 +7,7 @@
     font-size: 0.875rem;
     border-top: #28316ead 5px solid;
     font-weight: 100;
+    position: relative;
   }
   
   .footer-container {

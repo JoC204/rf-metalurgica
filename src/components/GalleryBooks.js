@@ -36,17 +36,13 @@ const books = [
     images: [
       require("../imgBooks/book3/bock3-1.jpg"),
       require("../imgBooks/book3/bock3-2.jpg"),
-      
     ],
   },
   {
     id: 4,
     title: "Book 4",
     cover: require("../imgBooks/book4/bock4-1.jpg"),
-    images: [
-      require("../imgBooks/book4/bock4-1.jpg"),
-      
-    ],
+    images: [require("../imgBooks/book4/bock4-1.jpg")],
   },
 ];
 
@@ -56,6 +52,9 @@ const GalleryBooks = () => {
 
   return (
     <div className={styles.galleryContainer}>
+      {/* <video autoPlay loop muted playsInline className={styles.videoBackground}>
+        <source src={require("../img/fondoRF.mp4")} type="video/mp4" />
+      </video> */}
       {/* Carrusel horizontal */}
       <div className={styles.carousel}>
         {books.map((book) => (
@@ -69,6 +68,13 @@ const GalleryBooks = () => {
           </div>
         ))}
       </div>
+
+      {/* Mostrar logo solo cuando no hay libro seleccionado */}
+      {!selectedBook && (
+        <div className={styles.logoNearCarousel}>
+          <img src={require("../img/rfMetalurgica.png")} alt="RF Metalurgica" />
+        </div>
+      )}
 
       {/* Book visible */}
       {selectedBook && (
