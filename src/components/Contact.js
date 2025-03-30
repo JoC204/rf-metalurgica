@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect, useRef } from "react";
 import "../Styles/Contact.css";
 import Formulario from "../components/Formulario";
 import {
@@ -13,10 +13,36 @@ import {
 } from "react-icons/fa";
 
 const Contact = () => {
+  const [scrolling, setScrolling] = useState(false);
+  const titleRef = useRef(null);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollTop = window.scrollY;
+      setScrolling(scrollTop > 50); // Ajusta este valor para cambiar cuando comienza la animación
+      
+      // Controla la opacidad y posición basada en el scroll
+      if (titleRef.current) {
+        const scrollRatio = Math.min(scrollTop / 350, 1); // Ajusta 150 para cambiar la velocidad
+        // titleRef.current.style.opacity = 1 - scrollRatio;
+        titleRef.current.style.transform = `translate(-50%, calc(10% - ${scrollRatio * -250}px))`;
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
     <div className="contact">
-      <div className="contact-image"></div>
-
+      <div className="contact-image">
+        <h1 
+          className={`contact-title ${scrolling ? "hidden" : ""}`} 
+          ref={titleRef}
+        >
+          Contacto
+        </h1>
+      </div>
       <div className="contact-content">
         <div className="contact-info">
           <div className="contact-info-item">

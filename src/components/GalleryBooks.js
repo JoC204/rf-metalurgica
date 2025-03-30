@@ -5,7 +5,7 @@ import styles from "../Styles/GalleryBooks.module.css";
 const books = [
   {
     id: 1,
-    title: "Book 1",
+    title: "Click a Mecanizado",
     cover: require("../imgBooks/book1/bock1-1.jpg"),
     images: [
       require("../imgBooks/book1/bock1-1.jpg"),
@@ -16,7 +16,7 @@ const books = [
   },
   {
     id: 2,
-    title: "Book 2",
+    title: "Click a Tornería",
     cover: require("../imgBooks/book2/bock2-4.jpg"),
     images: [
       require("../imgBooks/book2/bock2-1.jpg"),
@@ -31,7 +31,7 @@ const books = [
   },
   {
     id: 3,
-    title: "Book 3",
+    title: "Click a Reparaciones",
     cover: require("../imgBooks/book3/bock3-1.jpg"),
     images: [
       require("../imgBooks/book3/bock3-1.jpg"),
@@ -40,7 +40,7 @@ const books = [
   },
   {
     id: 4,
-    title: "Book 4",
+    title: "Click a otros",
     cover: require("../imgBooks/book4/bock4-1.jpg"),
     images: [require("../imgBooks/book4/bock4-1.jpg")],
   },

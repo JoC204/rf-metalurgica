@@ -1,17 +1,36 @@
-import React from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import styles from "../Styles/About.module.css";
-import bannerImg from "../img/BannerNosotros.jpg";
+// import bannerImg from "../img/BannerNosotros.jpg";
 
 const About = () => {
+  const [scrolling, setScrolling] = useState(false);
+    const titleRef = useRef(null);
+  
+    useEffect(() => {
+      const handleScroll = () => {
+        const scrollTop = window.scrollY;
+        setScrolling(scrollTop > 50); // Ajusta este valor para cambiar cuando comienza la animación
+        
+        // Controla la opacidad y posición basada en el scroll
+        if (titleRef.current) {
+          const scrollRatio = Math.min(scrollTop / 350, 1); // Ajusta 150 para cambiar la velocidad
+          // titleRef.current.style.opacity = 1 - scrollRatio;
+          titleRef.current.style.transform = `translate(-50%, calc(10% - ${scrollRatio * -250}px))`;
+        }
+      };
+  
+      window.addEventListener("scroll", handleScroll);
+      return () => window.removeEventListener("scroll", handleScroll);
+    }, []);
   return (
     <div className={styles.aboutContainer}>
       <div className={styles.banner}>
-        <img src={bannerImg} alt="Banner Sobre Nosotros" />
+        <h1 className={`contact-title ${scrolling ? "hidden" : ""}`} 
+          ref={titleRef}>Conocenos</h1>
       </div>
 
       <section className={styles.content}>
-        <h1>Conocé nuestros Empresa</h1>
         <p>
           Somos una empresa dedicada a ofrecer soluciones personalizadas de alta calidad. Nuestro enfoque está centrado en la innovación, el compromiso con nuestros clientes y la sostenibilidad. Trabajamos día a día para superar las expectativas, ofreciendo un servicio confiable y con altos estándares de calidad.
         </p>
