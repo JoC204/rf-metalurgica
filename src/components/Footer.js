@@ -5,6 +5,8 @@ import { LuMail } from "react-icons/lu";
 import { IoLocationOutline } from "react-icons/io5";
 import { FaChevronUp } from "react-icons/fa";
 
+const HEADER_HEIGHT = 100; // Adjust this value to match your header's height
+
 const Footer = () => {
   return (
     <footer className="footer">
@@ -38,7 +40,7 @@ const Footer = () => {
       </div>
       <button
         className="boton-footer"
-        onClick={() => window.scrollTo({ top: 0, behavior: "auto" })}
+        onClick={() => window.scrollTo({ top: 0 - HEADER_HEIGHT, behavior: "smooth" })}
       >
         <FaChevronUp />
       </button>
