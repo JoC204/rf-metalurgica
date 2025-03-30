@@ -10,8 +10,6 @@ body,
   padding: 0;
   font-size: 16px;
   background-attachment: fixed;
-  background-image: linear-gradient(to top, #dfe9f3 0%, white 100%);
-  width: 100.5%;
   /* Mantener scroll funcional, pero oculto */
   overflow-y: scroll;
   scrollbar-width: none;         /* Firefox */

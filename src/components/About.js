@@ -11,7 +11,7 @@ const About = () => {
       </div>
 
       <section className={styles.content}>
-        <h1>Sobre Nosotros</h1>
+        <h1>Conocé nuestros Empresa</h1>
         <p>
           Somos una empresa dedicada a ofrecer soluciones personalizadas de alta calidad. Nuestro enfoque está centrado en la innovación, el compromiso con nuestros clientes y la sostenibilidad. Trabajamos día a día para superar las expectativas, ofreciendo un servicio confiable y con altos estándares de calidad.
         </p>

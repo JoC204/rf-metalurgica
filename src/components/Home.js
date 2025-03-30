@@ -19,6 +19,7 @@ import imagen4 from "../img/rfMetalurgica.png";
 import imagen5 from "../img/rf-nosotros.jpg";
 import imagen6 from "../img/piezasUno.jpg";
 
+
 const Home = () => {
   return (
     <div className="home">

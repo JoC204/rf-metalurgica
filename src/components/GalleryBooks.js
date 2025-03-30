@@ -52,9 +52,9 @@ const GalleryBooks = () => {
 
   return (
     <div className={styles.galleryContainer}>
-      {/* <video autoPlay loop muted playsInline className={styles.videoBackground}>
+      <video autoPlay loop muted playsInline className={styles.videoBackground}>
         <source src={require("../img/fondoRF.mp4")} type="video/mp4" />
-      </video> */}
+      </video>
       {/* Carrusel horizontal */}
       <div className={styles.carousel}>
         {books.map((book) => (

@@ -2,6 +2,7 @@
 .home {
   margin: 0;
   padding: 0;
+  background: transparent;
 }
 
 /* Estilos para el carrusel */
@@ -60,7 +61,7 @@
 }
 
 .swiper-pagination-bullet-active {
-  background-color: #f0a500;
+  background-color: #feab4d;
 }
 
 /* Estilos para el cuadro de texto dentro del carrusel */
@@ -108,7 +109,7 @@
 }
 
 .text-box button {
-  background-color: #f0a500;
+  background-color: #feab4d;
   color: white;
   border: none;
   padding: 10px 20px;
@@ -119,7 +120,7 @@
 }
 
 .text-box button:hover {
-  background-color: #e69500;
+  background-color: #ff9c2a;
 }
 
 .logo-dos img {
@@ -188,7 +189,7 @@
 .button-link-galeria {
   text-decoration: none;
   outline: none;
-  background-color: #f0a400;
+  background-color: #feab4d;
   color: white;
   border: none;
   padding: 10px 10px;
@@ -208,7 +209,7 @@
 .sobreNos-h3 {
   font-size: 2.5rem;
   font-weight: 700;
-  color: #f0a500;
+  color: #feab4d;
   padding: 3rem 0 1rem 0;
   text-shadow: #000 2px 2px 7px;
 }
@@ -228,7 +229,7 @@
 .button-link-about {
   text-decoration: none;
   outline: none;
-  background-color: #f0a400;
+  background-color: #feab4d;
   color: white;
   border: none;
   padding: 10px 10px;
@@ -243,6 +244,8 @@
 .button-link-about:hover {
   background-color: #e69500;
 }
+
+
 
 /* Estilos responsive */
 @media (max-width: 768px) {
@@ -302,6 +305,7 @@
     font-size: 0.8rem;
   }
 }
+
 
 @media (max-width: 321px) {
   @keyframes fadeInUp {
