@@ -125,3 +125,9 @@
     transform: translateY(0);
   }
 }
+
+@media (max-width: 376px) {
+  .book img {
+    width: 40vw;
+  }
+}

@@ -23,8 +23,8 @@ const Footer = () => {
           >
             <SiWhatsapp /> 341-156 579576
           </a>
-          <a href="mailto:riccifabricio@yahoo.com.ar">
-            <LuMail /> riccifabricio@yahoo.com.ar
+          <a href="mailto:rf.mecanizados@gmail.com">
+            <LuMail /> rf.mecanizados@gmail.com
           </a>
           <a
             href="https://maps.app.goo.gl/myrkMCaKaXuz3JGf9"

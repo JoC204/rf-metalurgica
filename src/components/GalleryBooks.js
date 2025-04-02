@@ -63,7 +63,7 @@ const GalleryBooks = () => {
             className={styles.cover}
             onClick={() => setSelectedBook(book)}
           >
-            <img src={book.cover} alt={book.title} />
+            <img src={book.cover} alt={book.title} loading="lazy" />
             <p>{book.title}</p>
           </div>
         ))}
@@ -72,7 +72,7 @@ const GalleryBooks = () => {
       {/* Mostrar logo solo cuando no hay libro seleccionado */}
       {!selectedBook && (
         <div className={styles.logoNearCarousel}>
-          <img src={require("../img/rfMetalurgica.png")} alt="RF Metalurgica" />
+          <img src={require("../img/rfMetalurgica.png")} alt="RF Metalurgica" loading="lazy" />
         </div>
       )}
 
@@ -84,6 +84,7 @@ const GalleryBooks = () => {
               key={idx}
               src={img}
               alt={`Book ${selectedBook.id} - ${idx}`}
+              loading="lazy"
               onClick={() => setZoomImage(img)}
             />
           ))}
@@ -93,7 +94,7 @@ const GalleryBooks = () => {
       {/* Visor de imagen ampliada */}
       {zoomImage && (
         <div className={styles.modal} onClick={() => setZoomImage(null)}>
-          <img src={zoomImage} alt="Zoom" />
+          <img src={zoomImage} alt="Zoom" loading="lazy" />
         </div>
       )}
     </div>
