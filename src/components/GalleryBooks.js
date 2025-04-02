@@ -72,7 +72,11 @@ const GalleryBooks = () => {
       {/* Mostrar logo solo cuando no hay libro seleccionado */}
       {!selectedBook && (
         <div className={styles.logoNearCarousel}>
-          <img src={require("../img/rfMetalurgica.png")} alt="RF Metalurgica" loading="lazy" />
+          <img
+            src={require("../img/rfMetalurgica.png")}
+            alt="RF Metalurgica"
+            loading="lazy"
+          />
         </div>
       )}
 
