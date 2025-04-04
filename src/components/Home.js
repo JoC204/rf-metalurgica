@@ -2,6 +2,7 @@ import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination, Zoom } from "swiper/modules";
 import { Link } from "react-router-dom";
+import LogoEmpresas from "./LogoEmpresas";
 
 import "swiper/css";
 import "swiper/css/autoplay";
@@ -114,6 +115,8 @@ const Home = () => {
           </div>
         </div>
       </div>
+      <h3 className="sobreNos-logos">Empresas que confían en nosotros</h3>  
+      <LogoEmpresas />
       <div id="seccion-footer"></div>
     </div>
   );

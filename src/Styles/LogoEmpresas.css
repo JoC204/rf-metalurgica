@@ -1,0 +1,42 @@
+.logo-container {
+    width: 100%;
+    padding: 1rem 0;
+    background-color: rgba(255, 255, 255, 0);
+    overflow: hidden;
+  }
+  
+  .logo-track {
+    display: flex;
+    gap: 0 2rem ;
+    /* 
+      Se calcula el ancho total de la pista.
+      Aquí se asume que se tienen 15 logos y se duplican, es decir, 30 elementos.
+      Si agregas o quitas logos, actualiza este valor.
+    */
+    width: calc(150px * 15 * 2 + 2rem * 15 * 2);
+    animation: scroll 30s linear infinite;
+  }
+  
+  .logo-item {
+    flex-shrink: 0;
+    width: 150px;
+    height: 150px;
+  }
+  
+  .logo-image {
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+    filter: grayscale(100%) opacity(0.5);
+  }
+  
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      /* Se desplaza el 50% del ancho total (equivalente a la primera tanda de logos) */
+      transform: translateX(-50%);
+    }
+  }
+  

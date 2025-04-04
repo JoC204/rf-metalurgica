@@ -246,7 +246,13 @@
   background-color: #e69500;
 }
 
-
+.sobreNos-logos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 2rem;
+}
 
 /* Estilos responsive */
 @media (max-width: 768px) {
