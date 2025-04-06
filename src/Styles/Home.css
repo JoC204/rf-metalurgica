@@ -256,11 +256,15 @@
 
 /* Estilos responsive */
 @media (max-width: 768px) {
-  .imagen-mobile-left {
-    object-position: 10%;
-  }
-  .imagen-mobile-right {
+  .imagen-mobile-uno {
     object-position: 58%;
+  }
+  .imagen-mobile-dos {
+    object-position: 1%;
+  
+  }
+  .imagen-mobile-tres {
+    object-position: 10%;
   }
   .swiper-slide .swiper-zoom-container img {
     filter: brightness(70%);

@@ -1,6 +1,6 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, Pagination, Zoom } from "swiper/modules";
+import { Autoplay, Pagination,  Zoom } from "swiper/modules";
 import { Link } from "react-router-dom";
 import LogoEmpresas from "./LogoEmpresas";
 
@@ -14,7 +14,7 @@ import "../Styles/Home.css";
 
 // Importa las imágenes
 import imagen1 from "../img/carrusel-uno.webp";
-import imagen2 from "../img/carrusel-dos.webp";
+import imagen2 from "../img/carrusel-dos.jpg";
 import imagen3 from "../img/carrusel-tres.webp";
 import imagen4 from "../img/rfMetalurgica.png";
 import imagen5 from "../img/rf-nosotros.webp";
@@ -41,7 +41,7 @@ const Home = () => {
       >
         <SwiperSlide>
           <div className="swiper-zoom-container">
-            <img className="imagen-mobile-right" src={imagen3} alt="Imagen 3" loading="lazy" />
+            <img className="imagen-mobile-uno" src={imagen3} alt="Imagen 3" loading="lazy" />
             <div className="text-box">
               <div className="logo-dos">
                 <img src={imagen4} alt="Logo completo" loading="lazy" />
@@ -58,7 +58,7 @@ const Home = () => {
         </SwiperSlide>
         <SwiperSlide>
           <div className="swiper-zoom-container">
-            <img src={imagen2} alt="Imagen 2" loading="lazy" />
+            <img className="imagen-mobile-dos" src={imagen2} alt="Imagen 2" loading="lazy" />
             <div className="text-box">
               <h2>Nuestra Experiencia en Cada Detalle</h2>
               <p>
@@ -72,7 +72,7 @@ const Home = () => {
         </SwiperSlide>
         <SwiperSlide>
           <div className="swiper-zoom-container">
-            <img className="imagen-mobile-left" src={imagen1} alt="Imagen 1" loading="lazy" />
+            <img className="imagen-mobile-tres" src={imagen1} alt="Imagen 1" loading="lazy" />
             <div className="text-box">
               <h2>Estamos Aquí <br></br>para Ayudarte</h2>
               <p>
