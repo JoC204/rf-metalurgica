@@ -5,11 +5,12 @@
   /* background-image: url("../img/bannerRf.jpg"); */
   background-size: cover;
   background-position: center;
-  background-attachment: fixed; /* 👈 Parallax */
+  background-attachment: fixed; 
   background-repeat: no-repeat;
   overflow-x: hidden;
   background-color: transparent;
 }
+
 
 /* Carrusel horizontal */
 .carousel {
@@ -24,7 +25,7 @@
 
 .cover {
   flex: 0 0 auto;
-  width: 80vw;
+  width: 60vw;
   scroll-snap-align: start;
   position: relative;
 }
@@ -32,7 +33,7 @@
 .cover img {
   width: 100%;
   border-radius: 10px;
-  object-fit: cover;
+  /* object-fit: cover; */
 }
 
 .cover p {
@@ -54,6 +55,18 @@
   gap: 0.5rem;
   justify-content: center;
 }
+
+.bookTitle {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  margin: 2rem 0 2rem;
+  font-size: 3rem;
+  color: white;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);
+  
+}
+
 
 .book img {
   z-index: 1;
@@ -125,6 +138,88 @@
     transform: translateY(0);
   }
 }
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  padding: 0.5rem;
+  cursor: pointer;
+  color: white;
+  z-index: 1001;
+}
+
+.arrow.left {
+  left: 20px;
+}
+
+.arrow.right {
+  right: 20px;
+}
+
+.closeButton {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  padding: 0.5rem;
+  border-radius: 50%;
+  cursor: pointer;
+  color: white;
+  z-index: 1001;
+}
+.controls {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .carousel {
+    gap: 0.5rem;
+  }
+  .cover img {
+    width: 60%;
+  }
+  .book img {
+    width: 18vw;
+  }
+
+  .cover {
+    width: 25vw;
+    
+  }
+  .controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 50%;
+    left: 0;
+    right: 0;
+    transform: translateY(-50%);
+    padding: 0 2rem;
+    z-index: 1001;
+  }
+
+  .controlButton {
+    background: rgba(0, 0, 0, 0.4);
+    border: none;
+    color: white;
+    font-size: 3rem;
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+
+  .controlButton:hover {
+    background: rgba(255, 255, 255, 0.2);
+  }
+}
+
+
 
 @media (max-width: 376px) {
   .book img {

@@ -13,12 +13,12 @@ import "swiper/css/zoom";
 import "../Styles/Home.css";
 
 // Importa las imágenes
-import imagen1 from "../img/carrusel-uno.webp";
+import imagen1 from "../img/carrusel-uno.jpeg";
 import imagen2 from "../img/carrusel-dos.jpg";
-import imagen3 from "../img/carrusel-tres.webp";
+import imagen3 from "../img/carrusel-tres.jpeg";
 import imagen4 from "../img/rfMetalurgica.png";
-import imagen5 from "../img/rf-nosotros.webp";
-import imagen6 from "../img/piezasUno.webp";
+import imagen5 from "../img/rf-nosotros.jpg";
+import imagen6 from "../img/piezasUno.jpg";
 
 const Home = () => {
   return (

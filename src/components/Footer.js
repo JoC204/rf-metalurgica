@@ -4,6 +4,7 @@ import { SiWhatsapp } from "react-icons/si";
 import { LuMail } from "react-icons/lu";
 import { IoLocationOutline } from "react-icons/io5";
 import { FaChevronUp } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const HEADER_HEIGHT = 100; // Adjust this value to match your header's height
 
@@ -12,10 +13,10 @@ const Footer = () => {
     <footer className="footer">
       <div className="footer-container">
         <nav>
-          <a href="/">Inicio</a>
-          <a href="about">Sobre Nosotros</a>
-          <a href="gallery">Trabajos</a>
-          <a href="contact">Contacto</a>
+          <Link to="/">Inicio</Link>
+          <Link to="/about">Nosotros</Link>
+          <Link to="/gallery">Trabajos</Link>
+          <Link to="/contact">Contacto</Link>
           <a
             href="https://wa.me/549341156579576"
             target="_blank"
@@ -40,7 +41,9 @@ const Footer = () => {
       </div>
       <button
         className="boton-footer"
-        onClick={() => window.scrollTo({ top: 0 - HEADER_HEIGHT, behavior: "smooth" })}
+        onClick={() =>
+          window.scrollTo({ top: 0 - HEADER_HEIGHT, behavior: "smooth" })
+        }
       >
         <FaChevronUp />
       </button>
