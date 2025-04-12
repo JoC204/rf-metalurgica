@@ -6,7 +6,6 @@ import Logo from "../img/rf-logo.png";
 import {
   FaInstagram,
   FaWhatsapp,
-  FaLinkedinIn,
 } from "react-icons/fa";
 
 const Header = () => {
@@ -70,13 +69,13 @@ const Header = () => {
     <FaWhatsapp />
   </a>
 
-  <a
+  {/* <a
     href="https://www.linkedin.com/company/rfmetalurgica"
     target="_blank"
     rel="noopener noreferrer"
   >
     <FaLinkedinIn />
-  </a>
+  </a> */}
 
   {/* <a
     href="https://www.youtube.com/@rfmetalurgica"
