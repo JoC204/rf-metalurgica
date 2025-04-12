@@ -134,6 +134,8 @@
 
 #seccion-conocenos,
 #seccion-trabajos {
+  display: flex;
+  flex-direction: column;
   position: relative;
   width: 100%;
   height: 100vh;
@@ -184,24 +186,6 @@
   margin-top: 2rem;
 }
 
-/* .button-link-galeria {
-  text-decoration: none;
-  outline: none;
-  background-color: #feab4d;
-  color: white;
-  border: none;
-  padding: 10px 10px;
-  font-size: 1rem;
-  cursor: pointer;
-  border-radius: 5px;
-}
-.button-link-galeria a {
-  text-decoration: none;
-  color: white;
-}
-.button-link-galeria:hover {
-  background-color: #e69500;
-} */
 
 .trabajos-text h3,
 .sobreNos-h3 {
@@ -239,10 +223,7 @@ box-shadow:  5px 5px 20px #3f2e1b,
              -5px -5px 20px #ffbb5454;
   transition: all 0.3s ease;
 }
-/* .button-link-about a {
-  text-decoration: none;
-  color: white;
-} */
+
 .button-link:hover {
   background-color: #ffffff;
   box-shadow:  5px 5px 50px #3f2e1b,
@@ -256,6 +237,7 @@ box-shadow:  5px 5px 20px #3f2e1b,
   display: flex;
   justify-content: center;
   align-items: center;
+  font-size: 1.6rem;
   gap: 2rem;
   margin-top: 2rem;
 }
@@ -272,10 +254,13 @@ box-shadow:  5px 5px 20px #3f2e1b,
     object-position: 10%;
   }
   .swiper-slide .swiper-zoom-container img {
-    filter: brightness(70%);
+    filter: brightness(80%);
   }
   .text-box {
     top: 90%;
+  }
+  .sobreNos-logos {
+    font-size: 1.5rem;
   }
 }
 
@@ -322,6 +307,9 @@ box-shadow:  5px 5px 20px #3f2e1b,
   .text-box p {
     font-size: 0.8rem;
   }
+  .sobreNos-logos {
+    font-size: 1.3rem;
+  }
 }
 
 @media (max-width: 321px) {
@@ -353,5 +341,100 @@ box-shadow:  5px 5px 20px #3f2e1b,
 
   .parrafo-home {
     font-size: 0.8rem;
+  }
+  .sobreNos-logos {
+    font-size: 1.3rem;
+  }
+}
+@media (min-width: 769px) {
+ .text-box h2 {
+   font-size: 2.5rem;
+   padding: 0 20px;
+   width: 50rem;
+ }
+ h2 br {
+   display: none;
+ }
+  .text-box p {
+    font-size: 1.2rem;
+  }
+  @keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateX(-50%) translateY(100%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(-50%) translateY(-120%);
+    }
+  }
+  .logo-dos img {
+    width: 26rem !important;
+    margin: 0;
+  }
+  .seccion-conocenos {
+    flex-direction: row;  /* imagen izquierda + texto derecha */
+    align-items: center;
+    justify-content: center;
+    text-align: left; /* El texto queda alineado a la izquierda */
+    padding: 3rem 2rem; /* Un padding mayor para desktop */
+    gap: 3rem; /* Más espacio entre imagen y texto */
+    height: auto; 
+    
+  }
+
+  .rf-ia {
+    flex: 1;
+    max-width: 800px; /* Ajustalo según el tamaño deseado */
+    left: 5rem;
+    margin-top: 8rem;
+  }
+
+  .rf-ia-text {
+    flex: 1;
+    margin-top: 2rem;
+    max-width: 600px;
+    text-align: right;
+    right: -25rem;
+  }
+
+  .sobreNos-h3 {
+    font-size: 4rem;
+    text-align: center;
+  }
+  .sobreNos {
+    font-size: 1.8rem;
+    text-align: center;
+  }
+  .parrafo-home {
+    font-size: 1.1rem;
+    text-align: center;
+  }
+  .button-link {
+    font-size: 1rem;
+    padding: 0.8rem 1.5rem;
+    justify-content: center;
+    margin-top: 3rem;
+    /* text-shadow: black 2px 2px 5px; */
+  }
+
+
+  .seccion-trabajos .parrafo-home{
+    text-align: center;
+    width: 55rem;
+    font-size: 1.4rem;
+  }
+  .seccion-trabajos h3 {
+    font-size: 4rem;
+    text-align: center;
+  }
+  .seccion-trabajos h1 {
+    font-size: 3rem;
+    text-align: center;
+  }
+
+  .sobreNos-logos {
+    font-size: 3rem;
+    margin: 4rem 0;
   }
 }

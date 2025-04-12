@@ -109,7 +109,7 @@ const Home = () => {
 
       {/* Sección 2 */}
       <div className="seccion-dos">
-        <div id="seccion-conocenos">
+        <div id="seccion-conocenos" className="seccion-conocenos">
           <img className="rf-ia" src={imagen5} alt="Imagen 5" loading="lazy" />
           <div className="rf-ia-text">
             <h3 className="sobreNos-h3">Sobre Nosotros</h3>
@@ -125,7 +125,7 @@ const Home = () => {
             </Link>
           </div>
         </div>
-        <div id="seccion-trabajos">
+        <div id="seccion-trabajos" className="seccion-trabajos">
           <img
             className="trabajos"
             src={imagen6}
@@ -137,7 +137,7 @@ const Home = () => {
             <h1 className="sobreNos">Calidad y Precisión en Acción</h1>
             <p className="parrafo-home">
               "Cada proyecto es un desafío que superamos con precisión y
-              calidad. Explora nuestra galería y conoce los trabajos que nos han
+              calidad.<br></br> Explora nuestra galería y conoce los trabajos que nos han
               convertido en referentes del mecanizado."
             </p>
             <Link to="/gallery" className="button-link">
