@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import "../Styles/Contact.css";
+import { RiScrollToBottomLine } from "react-icons/ri";
 import Formulario from "../components/Formulario";
 import {
   FaEnvelope,
@@ -40,7 +41,7 @@ const Contact = () => {
           className={`contact-title ${scrolling ? "hidden" : ""}`}
           ref={titleRef}
         >
-          Contacto
+          CONTACTO<br></br><RiScrollToBottomLine />
         </h1>
       </div>
       <div className="contact-content">

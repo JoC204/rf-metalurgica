@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import styles from "../Styles/About.module.css";
+import { RiScrollToBottomLine } from "react-icons/ri";
 // import bannerImg from "../img/BannerNosotros.jpg";
 
 const About = () => {
@@ -28,7 +29,7 @@ const About = () => {
     <div className={styles.aboutContainer}>
       <div className={styles.banner}>
         <h1 className={`contact-title ${scrolling ? "hidden" : ""}`} ref={titleRef}>
-          Conócenos
+          CONOCENOS<br></br><RiScrollToBottomLine />
         </h1>
       </div>
 
