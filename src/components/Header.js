@@ -3,7 +3,11 @@ import { Link } from "react-router-dom";
 import Navbar from "./NavBar"; // Ajusta la ruta si es necesario
 import "../Styles/Header.css";
 import Logo from "../img/rf-logo.png";
-import WhatsappLogo from "../img/wts.svg";
+import {
+  FaInstagram,
+  FaWhatsapp,
+  FaLinkedinIn,
+} from "react-icons/fa";
 
 const Header = () => {
   const [scrolling, setScrolling] = useState(false);
@@ -32,7 +36,9 @@ const Header = () => {
 
   return (
     <header
-      className={`header ${scrolling ? "hidden" : ""} ${menuOpen ? "menu-active" : ""} ${menuTransition ? "transitioning" : ""}`}
+      className={`header ${scrolling ? "hidden" : ""} ${
+        menuOpen ? "menu-active" : ""
+      } ${menuTransition ? "transitioning" : ""}`}
     >
       <div className="header-content">
         <Link to="/" onClick={closeMenu} className="logo-link">
@@ -45,16 +51,44 @@ const Header = () => {
           ☰
         </button>
         <Navbar menuOpen={menuOpen} closeMenu={closeMenu} />
+        
         <div className="social-links">
-          <a
-            className="wtsLogoLink"
-            href="https://wa.me/+5493415555535?text=Hola%2C%20te%20contacto%20desde%20la%20web%20de%20RF%20Metalurgica%0A%0A%20--"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <img className="wtsLogo" src={WhatsappLogo} alt="WhatsApp Logo" />
-          </a>
-        </div>
+  <a
+    href="https://www.instagram.com/rfmetalurgica"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <FaInstagram />
+  </a>
+
+  <a
+    className="wtsLogoLink"
+    href="https://wa.me/+5493415555535?text=Hola%2C%20te%20contacto%20desde%20la%20web%20de%20RF%20Metalurgica%0A%0A%20--"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <FaWhatsapp />
+  </a>
+
+  <a
+    href="https://www.linkedin.com/company/rfmetalurgica"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <FaLinkedinIn />
+  </a>
+
+  {/* <a
+    href="https://www.youtube.com/@rfmetalurgica"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <FaYoutube />
+  </a> */}
+</div>
+
+          
+        
       </div>
     </header>
   );

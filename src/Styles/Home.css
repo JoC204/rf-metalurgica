@@ -94,7 +94,6 @@
   }
 }
 
-
 .text-box h2 {
   width: 100%;
   margin: 0 0 10px 0;
@@ -185,7 +184,7 @@
   margin-top: 2rem;
 }
 
-.button-link-galeria {
+/* .button-link-galeria {
   text-decoration: none;
   outline: none;
   background-color: #feab4d;
@@ -202,7 +201,7 @@
 }
 .button-link-galeria:hover {
   background-color: #e69500;
-}
+} */
 
 .trabajos-text h3,
 .sobreNos-h3 {
@@ -228,22 +227,29 @@
 .button-link {
   display: inline-block;
   text-decoration: none;
-  background-color: #feab4d;
   color: white;
   padding: 7px 20px;
   font-size: 1rem;
   cursor: pointer;
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
   text-align: center;
   font-weight: 300;
+  border-radius: 24px;
+background: linear-gradient(145deg, #e59a45, #ffb752);
+box-shadow:  5px 5px 20px #3f2e1b,
+             -5px -5px 20px #ffbb5454;
+  transition: all 0.3s ease;
 }
 /* .button-link-about a {
   text-decoration: none;
   color: white;
 } */
 .button-link:hover {
-  background-color: #e69500;
+  background-color: #ffffff;
+  box-shadow:  5px 5px 50px #3f2e1b,
+             -5px -5px 50px #ffbb5454;  
+  transition: all 0.2s ease;
+  transform: scale(1.05);
+                      
 }
 
 .sobreNos-logos {
@@ -261,7 +267,6 @@
   }
   .imagen-mobile-dos {
     object-position: 1%;
-  
   }
   .imagen-mobile-tres {
     object-position: 10%;
@@ -296,7 +301,7 @@
     }
   }
   .rf-ia-text {
-    margin: 8rem 0 0 0 ;
+    margin: 8rem 0 0 0;
   }
   .trabajos-text h3,
   .sobreNos-h3 {
@@ -309,7 +314,7 @@
   .parrafo-home {
     font-size: 1.2rem;
   }
- 
+
   .text-box h2 {
     font-size: 1.5rem;
     padding: 0 20px;
@@ -318,7 +323,6 @@
     font-size: 0.8rem;
   }
 }
-
 
 @media (max-width: 321px) {
   @keyframes fadeInUp {

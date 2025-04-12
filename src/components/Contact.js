@@ -7,8 +7,6 @@ import {
   FaMapMarkerAlt,
   FaInstagram,
   FaWhatsapp,
-  FaLinkedinIn,
-  FaYoutube,
   FaWhatsappSquare,
 } from "react-icons/fa";
 
@@ -20,12 +18,14 @@ const Contact = () => {
     const handleScroll = () => {
       const scrollTop = window.scrollY;
       setScrolling(scrollTop > 50); // Ajusta este valor para cambiar cuando comienza la animación
-      
+
       // Controla la opacidad y posición basada en el scroll
       if (titleRef.current) {
         const scrollRatio = Math.min(scrollTop / 350, 1); // Ajusta 150 para cambiar la velocidad
         // titleRef.current.style.opacity = 1 - scrollRatio;
-        titleRef.current.style.transform = `translate(-50%, calc(10% - ${scrollRatio * -250}px))`;
+        titleRef.current.style.transform = `translate(-50%, calc(10% - ${
+          scrollRatio * -250
+        }px))`;
       }
     };
 
@@ -36,8 +36,8 @@ const Contact = () => {
   return (
     <div className="contact">
       <div className="contact-image">
-        <h1 
-          className={`contact-title ${scrolling ? "hidden" : ""}`} 
+        <h1
+          className={`contact-title ${scrolling ? "hidden" : ""}`}
           ref={titleRef}
         >
           Contacto
@@ -52,8 +52,9 @@ const Contact = () => {
               </p>
             </div>
             <div className="contact-info-text">
-              <h3>Teléfono</h3>
-              <p>+341-156 579576</p>
+              <h3>Teléfonos</h3>
+              <p>+54 9 341 657-9576</p>
+              <p>+54 9 341 552-1437</p>
             </div>
           </div>
 
@@ -96,10 +97,20 @@ const Contact = () => {
           <div className="redes">
             <h3>Nuestras redes</h3>
             <div className="social-icons">
-              <FaInstagram />
-              <FaWhatsapp />
-              <FaLinkedinIn />
-              <FaYoutube />
+              <a
+                href="https://www.instagram.com/rfmecanizados?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaInstagram />
+              </a>
+              <a
+                href="https://wa.me/+5493415521437?text=Hola%2C%20te%20contacto%20desde%20la%20web%20de%20RF%20Metalurgica%0A%0A%20--"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaWhatsapp />
+              </a>
             </div>
           </div>
         </div>

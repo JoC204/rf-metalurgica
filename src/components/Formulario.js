@@ -11,24 +11,24 @@ const Formulario = () => {
       <div className="formulario">
         <h3>Envíanos un mensaje</h3>
         <h5>Nombre y apellido</h5>
-        <input type="text" name="name" placeholder="Tu nombre completo" required />
+        <input type="text" name="Nombre" placeholder="Tu nombre completo" required />
         <h5>Email</h5>
         <input
           type="email"
-          name="email"
+          name="Email"
           placeholder="Correo electrónico"
           required
         />
         <h5>Número telefónico</h5>
         <input
           type="tel"
-          name="phone"
+          name="Teléfono"
           placeholder="Teléfono o Celular"
           required
         />
         <h5>Mensaje</h5>
         <textarea
-          name="message"
+          name="Mensaje"
           placeholder="Escribe tu consulta aquí"
           required
         ></textarea>
@@ -37,7 +37,7 @@ const Formulario = () => {
         <input
           type="hidden"
           name="_subject"
-          value="Nuevo mensaje desde el formulario"
+          value="Nuevo mensaje desde el formulario de la Web deRF Metalurgica"
         />
         <input type="hidden" name="_template" value="box" />
 

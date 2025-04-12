@@ -52,16 +52,13 @@ const About = () => {
         <div className={styles.card}>
           <h2>Visión</h2>
           <p>
-            Ser reconocidos como líderes en el mercado por nuestra innovación constante, responsabilidad social y la calidad de nuestras soluciones.
+            Ser reconocidos como líderes en el mercado por nuestra innovación constante, calidad y rapidez de respuesta en nuestras soluciones.
           </p>
         </div>
 
         <div className={styles.card}>
           <h2>Valores</h2>
           <ul>
-            <li>
-              <strong>Sostenibilidad:</strong> Trabajamos respetando el medio ambiente y fomentando prácticas responsables.
-            </li>
             <li>
               <strong>Innovación:</strong> Apostamos al desarrollo continuo de nuevas ideas y tecnologías.
             </li>

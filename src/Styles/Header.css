@@ -89,7 +89,8 @@
 /* Mobile Styles */
 @media (max-width: 768px) {
   .hamburger {
-    display: block; /* Mostramos el hamburguesa en móvil */
+    display: inline-flex; /* Mostramos el hamburguesa en móvil */
+
   }
 
   .header-content {
@@ -108,10 +109,23 @@
   }
 
   .social-links {
-    display: flex; /* Mostramos los logos de redes sociales en desktop */
+    display: flex;
+    margin-top: 1rem;
+    margin-right: 2rem;
+  }
+  
+  .social-links svg {
+    font-size: 1.5rem;
+    color: #ffffff;
+    transition: color 0.3s;
+  }
+  
+  .social-links svg:hover {
+    color: #000;
   }
   .header {
-    width: 100%;
+    width: 80%;
+    left: 10%;
   }
   .header-content {
     justify-content: space-between; /* Logo a la izquierda, Navbar centrado, redes sociales a la derecha */

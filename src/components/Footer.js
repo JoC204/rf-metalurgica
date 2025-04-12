@@ -18,11 +18,18 @@ const Footer = () => {
           <Link to="/gallery">Trabajos</Link>
           <Link to="/contact">Contacto</Link>
           <a
-            href="https://wa.me/549341156579576"
+            href="https://wa.me/5493416579576"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <SiWhatsapp /> 341-156 579576
+            <SiWhatsapp /> +54 9 341 657-9576
+          </a>
+          <a
+            href="https://wa.me/5493415521437"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <SiWhatsapp /> +54 9 341 552-1437
           </a>
           <a href="mailto:rf.mecanizados@gmail.com">
             <LuMail /> rf.mecanizados@gmail.com

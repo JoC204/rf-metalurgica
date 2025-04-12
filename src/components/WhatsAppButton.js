@@ -20,12 +20,17 @@ const WhatsAppButton = () => {
   return (
     <a
       className={`WhatsAppButton ${scrolling ? "hidden" : "visible"}`}
-      href="https://wa.me/+5493415555535?text=Hola%2C%20te%20contacto%20desde%20la%20web%20de%20RF%20Metalurgica%0A%0A%20--"
+      href="https://wa.me/+5493415521437?text=Hola%2C%20te%20contacto%20desde%20la%20web%20de%20RF%20Metalurgica%0A%0A%20--"
       target="_blank"
       rel="noopener noreferrer"
       style={styles.container}
     >
-      <img className="wtsLogo" src={WhatsappLogo} alt="WhatsApp Logo" style={styles.icon} />
+      <img
+        className="wtsLogo"
+        src={WhatsappLogo}
+        alt="WhatsApp Logo"
+        style={styles.icon}
+      />
     </a>
   );
 };
