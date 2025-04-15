@@ -14,7 +14,13 @@
   overflow: hidden;
 }
 
-
+.aboutLayout {
+  display: flex;
+  flex-direction: column; /* Mobile: uno debajo del otro */
+  gap: 2rem;
+  padding: 2rem 1rem;
+  align-items: center;
+}
 .content {
   padding: 2rem 1rem;
   text-align: center;
@@ -38,6 +44,7 @@
   padding: 1rem;
   width: 100%;
   max-width: 600px;
+
 }
 
 .card {
@@ -49,7 +56,6 @@
   margin: 0 auto;
   text-align: left;
 }
-
 .card h2 {
   margin-bottom: 1rem;
   font-size: 1.3rem;
@@ -67,6 +73,13 @@
 
 .card li {
   margin-bottom: 0.75rem;
+  text-decoration: none;
+}
+.card .icon-valores {
+  margin-right: 10px;
+}
+.aboutImg {
+  display: none;
 }
 .buttonGaleria {
   margin-top: 2rem;
@@ -125,5 +138,43 @@ box-shadow:  5px 5px 20px #3f2e1b,
   }
   .contact-title {
     font-size: 8rem;
+  }
+  .aboutLayout {
+    flex-direction: row; /* Lado a lado */
+    justify-content: center;
+    align-items: flex-start;
+    gap: 4rem;
+    padding: 4rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .content {
+    flex: 1;
+    text-align: left;
+    max-width: 600px;
+  }
+  .content p {
+    font-size: 1.5rem;
+  }
+  .cards {
+    flex: 1;
+    max-width: 800px;
+  }
+  .aboutImg {
+    display: flex;
+    flex: 1;
+    max-width: 40rem;
+    margin-top: 8rem;
+    margin-left: -3rem;
+  }
+  .buttonContainer h2 {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-size: 3rem;
+  }
+  .buttonGaleria {
+    font-size: 2rem;
+    width: 15rem;
   }
 }

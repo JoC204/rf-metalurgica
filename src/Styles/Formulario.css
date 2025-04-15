@@ -58,4 +58,12 @@
   .formulario button:hover {
     background-color: #3b5fac;
   }
+
+  @media (min-width: 768px) {
+    .contact-form {
+      padding: 2rem 1rem;
+      width: 100%;
+      margin: 0 2rem;
+    }
+  }
   

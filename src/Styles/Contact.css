@@ -42,7 +42,12 @@
   padding: 2rem 1rem;
   text-align: left;
 }
-
+.contenedor-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2rem 1rem;
+}
 .contact-content h2,
 .contact-content h3 {
   color: #333;
@@ -100,4 +105,5 @@ iframe {
   .contact-title {
     font-size: 6rem;
   }
+  
 }

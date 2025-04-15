@@ -37,7 +37,7 @@ const Formulario = () => {
         <input
           type="hidden"
           name="_subject"
-          value="Nuevo mensaje desde el formulario de la Web deRF Metalurgica"
+          value="Nuevo mensaje desde el formulario de la Web de RF Metalurgica"
         />
         <input type="hidden" name="_template" value="box" />
 
